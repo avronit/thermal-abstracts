@@ -178,8 +178,8 @@ function App() {
                   </div>
                 </fieldset>
                 <label className="field field-wide upload-field">
-                  <span>Supporting document <small>Optional · PDF or Word · 10 MB maximum</small></span>
-                  <input type="file" accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" onChange={(event) => {
+                  <span>Upload your poster <small>Optional · PDF or PowerPoint · 10 MB maximum</small></span>
+                  <input type="file" accept=".pdf,.ppt,.pptx,application/pdf,application/vnd.ms-powerpoint,application/vnd.openxmlformats-officedocument.presentationml.presentation" onChange={(event) => {
                     const file = event.target.files?.[0]
                     if (file && file.size > 10 * 1024 * 1024) {
                       setFileName('Files must be smaller than 10 MB.')
