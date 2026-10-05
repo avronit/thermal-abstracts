@@ -24,7 +24,6 @@ function App() {
         <div className="hero-content" id="top">
           <p className="eyebrow"><span className="live-dot" /> Call for abstracts <span className="eyebrow-divider">/</span> 2026</p>
           <h1 id="event-title">The Conference on Materials and Technologies for Extreme Conditions 4</h1>
-          <p className="hero-copy">A research forum for the materials that meet extreme heat, intense radiation, and the unknown.</p>
         </div>
         <div className="hero-footnote">
           <span>Materials science · Thermal engineering · Space research</span>
