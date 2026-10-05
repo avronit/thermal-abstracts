@@ -14,9 +14,8 @@ function App() {
         />
         <div className="hero-shade" />
         <header className="site-header">
-          <a className="institute-mark" href="#top" aria-label="Thermal Research Institute home">
-            <span className="mark-symbol" aria-hidden="true">TRI</span>
-            <span className="mark-name">Thermal Research<br />Institute of Israel</span>
+          <a className="institute-mark" href="#top" aria-label="THERIS, Thermal Research Institute of Israel">
+            <img className="theris-logo" src={`${import.meta.env.BASE_URL}theris-logo.svg`} alt="THERIS, Thermal Research Institute of Israel, theris@bgu.ac.il" />
           </a>
           <a className="header-link" href="#submission">Submission portal <span aria-hidden="true">↘</span></a>
         </header>
