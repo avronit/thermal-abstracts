@@ -24,10 +24,6 @@ function App() {
           <p className="eyebrow"><span className="live-dot" /> Call for abstracts <span className="eyebrow-divider">/</span> 2026</p>
           <h1 id="event-title">Characterizing Materials<br />at the Edge of the Sun</h1>
           <p className="hero-copy">A research forum for the materials that meet extreme heat, intense radiation, and the unknown.</p>
-          <div className="hero-actions">
-            <a className="button button-light" href="#submission">Begin submission <span aria-hidden="true">↘</span></a>
-            <a className="text-link" href="#guidelines">Read submission details <span aria-hidden="true">↓</span></a>
-          </div>
         </div>
         <div className="hero-footnote">
           <span>Materials science · Thermal engineering · Space research</span>
