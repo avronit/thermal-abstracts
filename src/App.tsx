@@ -1,75 +1,9 @@
-import { useEffect, useState } from 'react'
 import './App.css'
 
-type Submission = {
-  name: string
-  email: string
-  institution: string
-  coAuthors: string
-  title: string
-  track: string
-  format: string
-  abstract: string
-}
-
-const storageKey = 'tri-abstract-draft'
-const emptySubmission: Submission = {
-  name: '',
-  email: '',
-  institution: '',
-  coAuthors: '',
-  title: '',
-  track: '',
-  format: 'Oral presentation',
-  abstract: '',
-}
+const submissionFormUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSdhfYRPZCB4z92dgfHYqHQt7NwwyTrfP_oQ6vkBNIOQ-T9OXQ/viewform'
+const registrationFormUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSeyIpa6tdY4_gkSOo5SasldJR6YhGHyR66WyOcyWLHNBNek5A/viewform?usp=header'
 
 function App() {
-  const [submission, setSubmission] = useState<Submission>(() => {
-    try {
-      const saved = localStorage.getItem(storageKey)
-      return saved ? { ...emptySubmission, ...JSON.parse(saved) } : emptySubmission
-    } catch {
-      return emptySubmission
-    }
-  })
-  const [fileName, setFileName] = useState('')
-  const [notice, setNotice] = useState('')
-  const [submitted, setSubmitted] = useState(false)
-  const wordCount = submission.abstract.trim()
-    ? submission.abstract.trim().split(/\s+/).length
-    : 0
-
-  useEffect(() => {
-    const draft = localStorage.getItem(storageKey)
-    if (draft) setNotice('Your saved draft has been restored on this device.')
-  }, [])
-
-  function updateField(field: keyof Submission, value: string) {
-    setSubmission((current) => ({ ...current, [field]: value }))
-    setNotice('')
-    setSubmitted(false)
-  }
-
-  function saveDraft() {
-    localStorage.setItem(storageKey, JSON.stringify(submission))
-    setNotice('Draft saved on this device.')
-  }
-
-  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
-    event.preventDefault()
-    if (wordCount > 250) {
-      setNotice('Please shorten the abstract to 250 words or fewer.')
-      return
-    }
-    if (wordCount === 0) {
-      setNotice('Add your abstract text before submitting.')
-      return
-    }
-    setSubmitted(true)
-    setNotice('Demo submission complete. Your details are stored only in this browser; connect a submission service to receive abstracts.')
-  }
-
   return (
     <main>
       <section className="hero" aria-labelledby="event-title">
@@ -87,7 +21,7 @@ function App() {
           <a className="header-link" href="#submission">Submission portal <span aria-hidden="true">↘</span></a>
         </header>
         <div className="hero-content" id="top">
-          <p className="eyebrow"><span className="live-dot" /> Design preview <span className="eyebrow-divider">/</span> 2026 abstract portal</p>
+          <p className="eyebrow"><span className="live-dot" /> Call for abstracts <span className="eyebrow-divider">/</span> 2026</p>
           <h1 id="event-title">Characterizing Materials<br />at the Edge of the Sun</h1>
           <p className="hero-copy">A research forum for the materials that meet extreme heat, intense radiation, and the unknown.</p>
           <div className="hero-actions">
@@ -102,103 +36,29 @@ function App() {
       </section>
 
       <section className="submission-section" id="submission" aria-labelledby="submission-heading">
-        <p className="preview-banner">Preview only. Abstracts submitted here are not sent to the institute or stored centrally.</p>
         <div className="section-heading">
           <div>
-            <p className="section-index">01 <span>/</span> Abstract submission</p>
-            <h2 id="submission-heading">Put your research<br className="desktop-break" /> in the conversation.</h2>
+            <p className="section-index">01 <span>/</span> Forms</p>
+            <h2 id="submission-heading">Choose your form.</h2>
           </div>
-          <p className="section-intro">Share work that advances our understanding of materials under extreme thermal conditions. Required fields are marked with an asterisk.</p>
+          <p className="section-intro">Conference registration and abstract submission are handled separately. Choose the form that matches what you need.</p>
         </div>
 
         <div className="submission-layout">
-          <form className="submission-form" onSubmit={handleSubmit}>
-            <div className="form-block">
-              <div className="form-block-heading">
-                <span className="form-number">1</span>
-                <div><h3>Presenting author</h3><p>Who should we contact about this submission?</p></div>
-              </div>
-              <div className="field-grid">
-                <label className="field">
-                  <span>Full name <b>*</b></span>
-                  <input required autoComplete="name" value={submission.name} onChange={(event) => updateField('name', event.target.value)} placeholder="Dr. Alex Cohen" />
-                </label>
-                <label className="field">
-                  <span>Email address <b>*</b></span>
-                  <input required type="email" autoComplete="email" value={submission.email} onChange={(event) => updateField('email', event.target.value)} placeholder="you@institute.org" />
-                </label>
-                <label className="field field-wide">
-                  <span>Institution or organization <b>*</b></span>
-                  <input required autoComplete="organization" value={submission.institution} onChange={(event) => updateField('institution', event.target.value)} placeholder="University, laboratory, or company" />
-                </label>
-                <label className="field field-wide">
-                  <span>Co-authors <small>Optional · separate names with commas</small></span>
-                  <input value={submission.coAuthors} onChange={(event) => updateField('coAuthors', event.target.value)} placeholder="Full names of additional authors" />
-                </label>
-              </div>
+          <div className="submission-form submission-connect">
+            <div className="form-choice">
+              <p className="section-index">01 <span>/</span> Conference participation</p>
+              <h3>Register for THERIS 2026</h3>
+              <p>Complete your conference registration and participant details.</p>
+              <a className="button button-outline" href={registrationFormUrl} target="_blank" rel="noreferrer">Open registration form <span aria-hidden="true">↗</span></a>
             </div>
-
-            <div className="form-block">
-              <div className="form-block-heading">
-                <span className="form-number">2</span>
-                <div><h3>Research abstract</h3><p>Give your work a clear title and choose the closest research area.</p></div>
-              </div>
-              <div className="field-grid">
-                <label className="field field-wide">
-                  <span>Abstract title <b>*</b></span>
-                  <input required maxLength={180} value={submission.title} onChange={(event) => updateField('title', event.target.value)} placeholder="A concise title for your research" />
-                </label>
-                <label className="field field-wide">
-                  <span>Research area <b>*</b></span>
-                  <select required value={submission.track} onChange={(event) => updateField('track', event.target.value)}>
-                    <option value="" disabled>Select a research area</option>
-                    <option>High-temperature alloys</option>
-                    <option>Ceramics and refractory materials</option>
-                    <option>Thermal barrier and protective coatings</option>
-                    <option>Solar and concentrated-energy materials</option>
-                    <option>Materials characterization and testing</option>
-                    <option>Computational materials science</option>
-                    <option>Other materials research</option>
-                  </select>
-                </label>
-                <label className="field field-wide">
-                  <span>Abstract <b>*</b></span>
-                  <textarea required rows={8} value={submission.abstract} onChange={(event) => updateField('abstract', event.target.value)} placeholder="Introduce the challenge, describe your approach, and summarize the most important findings." />
-                  <span className={`word-count${wordCount > 250 ? ' word-count-over' : ''}`} aria-live="polite">{wordCount} / 250 words</span>
-                </label>
-                <fieldset className="field field-wide format-field">
-                  <legend>Presentation preference <b>*</b></legend>
-                  <div className="choice-row">
-                    {['Oral presentation', 'Poster presentation', 'No preference'].map((format) => (
-                      <label className="choice" key={format}>
-                        <input type="radio" name="format" value={format} checked={submission.format === format} onChange={(event) => updateField('format', event.target.value)} />
-                        <span>{format}</span>
-                      </label>
-                    ))}
-                  </div>
-                </fieldset>
-                <label className="field field-wide upload-field">
-                  <span>Upload your poster <small>Optional · PDF or PowerPoint · 10 MB maximum</small></span>
-                  <input type="file" accept=".pdf,.ppt,.pptx,application/pdf,application/vnd.ms-powerpoint,application/vnd.openxmlformats-officedocument.presentationml.presentation" onChange={(event) => {
-                    const file = event.target.files?.[0]
-                    if (file && file.size > 10 * 1024 * 1024) {
-                      setFileName('Files must be smaller than 10 MB.')
-                      event.target.value = ''
-                    } else {
-                      setFileName(file?.name ?? '')
-                    }
-                  }} />
-                  {fileName && <small className="file-feedback" role="status">{fileName}</small>}
-                </label>
-              </div>
+            <div className="form-choice">
+              <p className="section-index">02 <span>/</span> Research presentations</p>
+              <h3>Submit an abstract</h3>
+              <p>Send your abstract and upload your poster for the materials research program.</p>
+              <a className="button button-dark" href={submissionFormUrl} target="_blank" rel="noreferrer">Open abstract form <span aria-hidden="true">↗</span></a>
             </div>
-
-            <div className="form-actions">
-              <button className="button button-outline" type="button" onClick={saveDraft}>Save draft <span aria-hidden="true">↓</span></button>
-              <button className="button button-dark" type="submit">{submitted ? 'Submitted' : 'Submit abstract'} <span aria-hidden="true">↗</span></button>
-            </div>
-            {notice && <p className={`form-notice${submitted ? ' form-notice-success' : ''}`} role="status">{notice}</p>}
-          </form>
+          </div>
 
           <aside className="submission-aside" id="guidelines">
             <div className="deadline-block">
@@ -215,7 +75,7 @@ function App() {
                 <li>One author should be selected as the presenter.</li>
               </ul>
             </div>
-            <p className="aside-contact">Official submission contact and receipt workflow will be connected before launch.</p>
+            <p className="aside-contact">Abstract responses are recorded in the linked spreadsheet. Poster uploads are stored in Google Drive; Google sign-in is required.</p>
           </aside>
         </div>
       </section>
