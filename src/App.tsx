@@ -32,14 +32,6 @@ function App() {
       </section>
 
       <section className="submission-section" id="submission" aria-labelledby="submission-heading">
-        <div className="section-heading">
-          <div>
-            <p className="section-index">01 <span>/</span> Forms</p>
-            <h2 id="submission-heading">Choose your form.</h2>
-          </div>
-          <p className="section-intro">Conference registration and abstract submission are handled separately. Choose the form that matches what you need.</p>
-        </div>
-
         <div className="submission-layout">
           <div className="submission-form submission-connect">
             <div className="form-choice">
