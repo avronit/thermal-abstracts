@@ -70,7 +70,7 @@ function App() {
               </div>
               <div className="deadline-item">
                 <p className="deadline-date"><time dateTime="2026-12-15">15 <span>DEC</span></time></p>
-                <p className="deadline-year">2026 · Conference deadline</p>
+                <p className="deadline-year">2026 · Conference Date</p>
               </div>
             </div>
           </aside>
