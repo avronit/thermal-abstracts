@@ -69,7 +69,6 @@ function App() {
                 <p className="deadline-year">2026 · Registration deadline</p>
               </div>
             </div>
-            <p className="aside-contact">Abstract responses are recorded in the linked spreadsheet. Poster uploads are stored in Google Drive; Google sign-in is required.</p>
           </aside>
         </div>
       </section>
