@@ -45,6 +45,15 @@ function App() {
               <h3>Submit an abstract</h3>
               <p>Send your abstract and upload your poster for the materials research program.</p>
               <a className="button button-dark" href={submissionFormUrl} target="_blank" rel="noreferrer">Open abstract form <span aria-hidden="true">↗</span></a>
+              <div className="guideline-block">
+                <p className="aside-label">Submission notes</p>
+                <ul>
+                  <li>Abstracts must be written in English.</li>
+                  <li>Keep the abstract to 250 words or fewer.</li>
+                  <li>Include objective, method, key results, and conclusion.</li>
+                  <li>One author should be selected as the presenter.</li>
+                </ul>
+              </div>
             </div>
           </div>
 
@@ -59,15 +68,6 @@ function App() {
                 <p className="deadline-date"><time dateTime="2026-12-08">08 <span>DEC</span></time></p>
                 <p className="deadline-year">2026 · Registration deadline</p>
               </div>
-            </div>
-            <div className="guideline-block">
-              <p className="aside-label">Submission notes</p>
-              <ul>
-                <li>Abstracts must be written in English.</li>
-                <li>Keep the abstract to 250 words or fewer.</li>
-                <li>Include objective, method, key results, and conclusion.</li>
-                <li>One author should be selected as the presenter.</li>
-              </ul>
             </div>
             <p className="aside-contact">Abstract responses are recorded in the linked spreadsheet. Poster uploads are stored in Google Drive; Google sign-in is required.</p>
           </aside>
