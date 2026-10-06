@@ -53,7 +53,7 @@ function App() {
                   <li>One author should be selected as the presenter.</li>
                 </ul>
               </div>
-              <a className="button button-dark" href={submissionFormUrl} target="_blank" rel="noreferrer">Open abstract form <span aria-hidden="true">↗</span></a>
+              <a className="button button-dark" href={submissionFormUrl} target="_blank" rel="noreferrer">Submit <span aria-hidden="true">↗</span></a>
             </div>
           </div>
 
