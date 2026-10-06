@@ -44,7 +44,6 @@ function App() {
               <p className="section-index">02 <span>/</span> Research presentations</p>
               <h3>Submit an abstract</h3>
               <p>Send your abstract and upload your poster for the materials research program.</p>
-              <a className="button button-dark" href={submissionFormUrl} target="_blank" rel="noreferrer">Open abstract form <span aria-hidden="true">↗</span></a>
               <div className="guideline-block">
                 <p className="aside-label">Submission notes</p>
                 <ul>
@@ -54,6 +53,7 @@ function App() {
                   <li>One author should be selected as the presenter.</li>
                 </ul>
               </div>
+              <a className="button button-dark" href={submissionFormUrl} target="_blank" rel="noreferrer">Open abstract form <span aria-hidden="true">↗</span></a>
             </div>
           </div>
 
