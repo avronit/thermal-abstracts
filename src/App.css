@@ -303,7 +303,10 @@ a { color: inherit; }
 .submission-aside { border-top: 2px solid var(--ink); }
 .deadline-block, .guideline-block { padding: 22px 0 25px; border-bottom: 1px solid #c9cac4; }
 .aside-label { color: #686962; font-size: 10px; }
-.deadline-date { margin: 13px 0 0; font: 600 62px/.95 var(--font-display); letter-spacing: 0; }
+.deadline-item { margin-top: 13px; }
+.deadline-item + .deadline-item { margin-top: 17px; padding-top: 16px; border-top: 1px solid #c9cac4; }
+.deadline-date { margin: 0; font: 600 62px/.95 var(--font-display); letter-spacing: 0; }
+.deadline-date time { font: inherit; }
 .deadline-date span { color: #d85436; font: 600 18px/1 var(--font-display); vertical-align: 9px; margin-left: 3px; }
 .deadline-year { margin: 7px 0 0; color: #55564f; font-size: 11px; }
 .guideline-block ul { list-style: none; padding: 0; margin: 18px 0 0; }

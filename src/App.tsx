@@ -50,9 +50,15 @@ function App() {
 
           <aside className="submission-aside" id="guidelines">
             <div className="deadline-block">
-              <p className="aside-label">Important date</p>
-              <p className="deadline-date">15 <span>NOV</span></p>
-              <p className="deadline-year">2026 · Abstract deadline</p>
+              <p className="aside-label">Important dates</p>
+              <div className="deadline-item">
+                <p className="deadline-date"><time dateTime="2026-11-15">15 <span>NOV</span></time></p>
+                <p className="deadline-year">2026 · Abstract deadline</p>
+              </div>
+              <div className="deadline-item">
+                <p className="deadline-date"><time dateTime="2026-12-08">08 <span>DEC</span></time></p>
+                <p className="deadline-year">2026 · Registration deadline</p>
+              </div>
             </div>
             <div className="guideline-block">
               <p className="aside-label">Submission notes</p>
