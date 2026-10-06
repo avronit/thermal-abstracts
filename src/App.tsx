@@ -68,6 +68,10 @@ function App() {
                 <p className="deadline-date"><time dateTime="2026-12-08">08 <span>DEC</span></time></p>
                 <p className="deadline-year">2026 · Registration deadline</p>
               </div>
+              <div className="deadline-item">
+                <p className="deadline-date"><time dateTime="2026-12-15">15 <span>DEC</span></time></p>
+                <p className="deadline-year">2026 · Conference deadline</p>
+              </div>
             </div>
           </aside>
         </div>
