@@ -36,7 +36,7 @@ function App() {
           <div className="submission-form submission-connect">
             <div className="form-choice">
               <p className="section-index">01 <span>/</span> Conference participation</p>
-              <h3>Register for THERIS 2026</h3>
+              <h3>Register for the conference</h3>
               <p>Complete your conference registration and participant details.</p>
               <a className="button button-outline" href={registrationFormUrl} target="_blank" rel="noreferrer">Open registration form <span aria-hidden="true">↗</span></a>
             </div>
