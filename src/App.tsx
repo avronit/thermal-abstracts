@@ -41,7 +41,7 @@ function App() {
               <a className="button button-outline" href={registrationFormUrl} target="_blank" rel="noreferrer">Registration <span aria-hidden="true">↗</span></a>
             </div>
             <div className="form-choice">
-              <p className="section-index">02 <span>/</span> Research presentations</p>
+              <p className="section-index">02 <span>/</span> Research presentation and students poster session</p>
               <h3>Submit an abstract</h3>
               <p>Send your abstract and upload your poster for the materials research program.</p>
               <div className="guideline-block">
