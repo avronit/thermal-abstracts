@@ -23,7 +23,7 @@ function App() {
         </header>
         <div className="hero-content" id="top">
           <p className="eyebrow"><span className="live-dot" /> Call for abstracts <span className="eyebrow-divider">/</span> 2026</p>
-          <h1 id="event-title">The Conference on Materials and Technologies for Extreme Conditions 4</h1>
+          <h1 id="event-title">The 4th Conference on Materials and Technologies for Extreme Conditions</h1>
         </div>
         <div className="hero-footnote">
           <span>Materials science · Thermal engineering · Space research</span>
