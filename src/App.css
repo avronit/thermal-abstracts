@@ -233,8 +233,8 @@ a { color: inherit; }
 .header-link span { color: var(--ember); margin-left: 9px; }
 .hero-content { width: min(810px, 75%); margin: auto 0; padding: 58px 0 70px; animation: rise-in .75s .15s both; }
 .eyebrow, .section-index, .aside-label { margin: 0; font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
-.eyebrow { display: flex; align-items: center; gap: 10px; color: #d9d8d1; }
-.live-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--ember); box-shadow: 0 0 13px rgba(255,104,64,.8); }
+.eyebrow { display: flex; align-items: center; gap: 14px; color: #d9d8d1; font-size: 16px; }
+.live-dot { flex: 0 0 11px; width: 11px; height: 11px; border-radius: 50%; background: var(--ember); box-shadow: 0 0 13px rgba(255,104,64,.8); }
 .eyebrow-divider { color: var(--ember); }
 .hero h1 { color: #fff; font-family: var(--font-display); font-weight: 600; font-size: clamp(56px, 7vw, 100px); line-height: .93; letter-spacing: 0; margin: 25px 0 23px; text-transform: uppercase; max-width: 900px; }
 .hero-copy { max-width: 480px; color: #d2d0c9; font-size: 16px; line-height: 1.65; }

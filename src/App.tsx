@@ -22,7 +22,7 @@ function App() {
           <a className="header-link" href="#submission">Submission portal <span aria-hidden="true">↘</span></a>
         </header>
         <div className="hero-content" id="top">
-          <p className="eyebrow"><span className="live-dot" /> Call for abstracts <span className="eyebrow-divider">/</span> 2026</p>
+          <p className="eyebrow"><span className="live-dot" /> Registration and call for abstracts <span className="eyebrow-divider">/</span> December 15th, 2026</p>
           <h1 id="event-title">The 4th Conference on Materials and Technologies for Extreme Conditions</h1>
         </div>
         <div className="hero-footnote">
