@@ -2,6 +2,7 @@ import './App.css'
 
 const submissionFormUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSdhfYRPZCB4z92dgfHYqHQt7NwwyTrfP_oQ6vkBNIOQ-T9OXQ/viewform'
 const registrationFormUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSeyIpa6tdY4_gkSOo5SasldJR6YhGHyR66WyOcyWLHNBNek5A/viewform?usp=header'
+const therisUrl = 'https://www.bgu.ac.il/en/u/research-centers/theris/'
 
 function App() {
   return (
@@ -24,6 +25,9 @@ function App() {
         <div className="hero-content" id="top">
           <p className="eyebrow"><span className="live-dot" /> Registration and call for abstracts <span className="eyebrow-divider">/</span> December 15th, 2026</p>
           <h1 id="event-title">The 4th Conference on Materials and Technologies for Extreme Conditions</h1>
+          <a className="button button-light" href={therisUrl} target="_blank" rel="noreferrer">
+            Learn about THERIS <span aria-hidden="true">↗</span>
+          </a>
         </div>
         <div className="hero-footnote">
           <span>Materials science · Thermal engineering · Space research</span>
