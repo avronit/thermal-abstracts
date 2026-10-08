@@ -89,10 +89,24 @@
         padding-bottom: 7mm;
       }
 
+      .brand-pair {
+        display: flex;
+        align-items: center;
+        gap: 6mm;
+        direction: ltr;
+      }
+
       .brand {
         display: block;
         width: 52mm;
         max-width: 45vw;
+        height: auto;
+      }
+
+      .sponsor-logos {
+        display: block;
+        width: 70mm;
+        max-width: 58vw;
         height: auto;
       }
 
@@ -270,7 +284,10 @@
   <body>
     <main class="poster">
       <header class="header">
-        <img class="brand" src="./theris-lockup.png" alt="THERIS — המכון למחקר תרמי בישראל" />
+        <div class="brand-pair">
+          <img class="brand" src="./theris-lockup.png" alt="THERIS — המכון למחקר תרמי בישראל" />
+          <img class="sponsor-logos" src="./defense-ministry-mafat-logos.png" alt="משרד הביטחון ומפא״ת" />
+        </div>
       </header>
 
       <section class="content">
