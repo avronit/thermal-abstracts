@@ -27,7 +27,7 @@ function App() {
           </div>
         </header>
         <div className="hero-content" id="top">
-          <p className="eyebrow"><span className="live-dot" /> Registration and call for abstracts <span className="eyebrow-divider">/</span> <span className="hero-date">December <span className="hero-date-number">15<sup className="ordinal-suffix">th</sup></span>, 2026</span></p>
+          <p className="eyebrow"><span className="live-dot" /> Registration and call for abstracts <span className="eyebrow-divider">/</span> <span className="hero-date">December <span className="hero-date-number">15<sup className="ordinal-suffix">th</sup></span> 2026</span></p>
           <h1 id="event-title">The 4<sup className="ordinal-suffix">th</sup> Conference on Materials and Technologies for Extreme Conditions</h1>
           <a className="button button-theris" href={therisUrl} target="_blank" rel="noreferrer">
             Learn about THERIS <span aria-hidden="true">↗</span>
