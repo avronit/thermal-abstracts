@@ -89,25 +89,39 @@
         padding-bottom: 7mm;
       }
 
-      .brand-pair {
-        display: flex;
+      .brand-row {
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
         align-items: center;
-        gap: 6mm;
         direction: ltr;
       }
 
       .brand {
         display: block;
+        justify-self: start;
         width: 52mm;
         max-width: 45vw;
         height: auto;
       }
 
-      .sponsor-logos {
+      .logo-crop {
         display: block;
-        width: 70mm;
-        max-width: 58vw;
-        height: auto;
+        width: 31mm;
+        height: 22mm;
+        background-image: url("./defense-ministry-mafat-logos.png");
+        background-repeat: no-repeat;
+        background-size: 70mm auto;
+      }
+
+      .ministry-logo {
+        justify-self: center;
+        background-position: left center;
+      }
+
+      .mafat-logo {
+        justify-self: end;
+        background-position: 84% center;
       }
 
       .eyebrow,
@@ -284,9 +298,10 @@
   <body>
     <main class="poster">
       <header class="header">
-        <div class="brand-pair">
+        <div class="brand-row">
           <img class="brand" src="./theris-lockup.png" alt="THERIS — המכון למחקר תרמי בישראל" />
-          <img class="sponsor-logos" src="./defense-ministry-mafat-logos.png" alt="משרד הביטחון ומפא״ת" />
+          <div class="logo-crop ministry-logo" role="img" aria-label="משרד הביטחון"></div>
+          <div class="logo-crop mafat-logo" role="img" aria-label="מפא״ת"></div>
         </div>
       </header>
 
