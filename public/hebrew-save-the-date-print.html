@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="he">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Save the date: the 4th Conference on Materials and Technologies for Extreme Conditions, December 15, 2026." />
+    <title>Save the Date | 4th Conference on Materials and Technologies for Extreme Conditions</title>
+    <style>
+      @page {
+        size: 145mm 247mm;
+        margin: 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        width: 145mm;
+        height: 247mm;
+        margin: 0;
+      }
+
+      body {
+        background: #050d1b;
+      }
+
+      .poster {
+        position: relative;
+        width: 145mm;
+        height: 247mm;
+      }
+
+      .poster-image {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+
+      .register-link {
+        position: absolute;
+        top: 90.0645%;
+        left: 14.2857%;
+        width: 71.4286%;
+        height: 6.7742%;
+        border-radius: 4mm;
+        color: transparent;
+        text-decoration: none;
+      }
+
+      .register-link:focus-visible {
+        outline: 1mm solid #fff;
+        outline-offset: 1mm;
+      }
+
+      @media screen {
+        html,
+        body {
+          width: 100%;
+          height: 100%;
+          min-height: 100%;
+        }
+
+        body {
+          display: grid;
+          min-height: 100svh;
+          place-items: center;
+          padding: 16px;
+        }
+
+        .poster {
+          width: min(100%, 610px);
+          height: auto;
+          aspect-ratio: 910 / 1550;
+          box-shadow: 0 12px 48px rgba(0, 0, 0, .4);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="poster">
+      <img class="poster-image" src="./hebrew-save-the-date.png" alt="Save the date: 4th Conference on Materials and Technologies for Extreme Conditions, December 15, 2026, at Ben-Gurion University of the Negev. Abstract deadline: November 15, 2026. Registration deadline: December 8, 2026." />
+      <a class="register-link" href="https://avronit.github.io/thermal-abstracts/" aria-label="Register here at the conference webpage" title="Register here"></a>
+    </main>
+  </body>
+</html>
