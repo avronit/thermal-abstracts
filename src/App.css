@@ -235,6 +235,8 @@ a { color: inherit; }
 .hero-content { width: min(810px, 60%); margin: auto 0; padding: 58px 0 70px; animation: rise-in .75s .15s both; }
 .eyebrow, .section-index, .aside-label { margin: 0; font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
 .eyebrow { display: flex; align-items: center; gap: 14px; color: #d9d8d1; font-size: 16px; }
+.hero-date { display: inline-flex; align-items: center; gap: 5px; }
+.hero-date-number { font: 600 clamp(44px, 5.4vw, 78px)/.93 var(--font-display); letter-spacing: 0; }
 .live-dot { flex: 0 0 11px; width: 11px; height: 11px; border-radius: 50%; background: var(--ember); box-shadow: 0 0 13px rgba(255,104,64,.8); }
 .eyebrow-divider { color: var(--ember); }
 .hero h1 { color: #fff; font-family: var(--font-display); font-weight: 600; font-size: clamp(44px, 5.4vw, 78px); line-height: .93; letter-spacing: 0; margin: 25px 0 23px; text-transform: uppercase; max-width: 900px; }
@@ -346,6 +348,7 @@ a { color: inherit; }
   .hero-sun { width: 137%; height: 92%; right: -72%; top: 5%; opacity: .76; }
   .hero-shade { background: linear-gradient(90deg, #050505 0%, rgba(5,5,5,.94) 40%, rgba(5,5,5,.57) 75%, rgba(5,5,5,.22) 100%), linear-gradient(0deg, rgba(0,0,0,.7), transparent 42%); }
   .hero-content { width: 64%; padding: 18px 0 24px; }
+  .hero-date-number { font-size: clamp(30px, 8vw, 42px); }
   .research-diagram { top: 53%; right: 12px; width: clamp(124px, 32vw, 190px); opacity: .95; }
   .hero h1 { font-size: clamp(30px, 8vw, 42px); margin: 16px 0 14px; }
   .hero-copy { max-width: 365px; font-size: 14px; }
