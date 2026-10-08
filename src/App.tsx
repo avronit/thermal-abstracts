@@ -28,7 +28,7 @@ function App() {
         </header>
         <div className="hero-content" id="top">
           <p className="eyebrow"><span className="live-dot" /> Registration and call for abstracts <span className="eyebrow-divider">/</span> December 15th, 2026</p>
-          <h1 id="event-title">The 4th Conference on Materials and Technologies for Extreme Conditions</h1>
+          <h1 id="event-title">The 4<sup className="ordinal-suffix">th</sup> Conference on Materials and Technologies for Extreme Conditions</h1>
           <a className="button button-theris" href={therisUrl} target="_blank" rel="noreferrer">
             Learn about THERIS <span aria-hidden="true">↗</span>
           </a>
