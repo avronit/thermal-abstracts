@@ -84,14 +84,42 @@
         align-items: center;
         justify-content: space-between;
         border-bottom: 1px solid rgba(255, 255, 255, .24);
-        padding-bottom: 7mm;
+        padding-bottom: 3mm;
+      }
+
+      .brand-row {
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        align-items: center;
+        direction: ltr;
       }
 
       .brand {
         display: block;
-        width: 52mm;
-        max-width: 45vw;
+        justify-self: start;
+        width: 56mm;
+        max-width: 100%;
         height: auto;
+      }
+
+      .ministry-logo {
+        display: block;
+        justify-self: center;
+        width: 34mm;
+        height: 25mm;
+        object-fit: contain;
+      }
+
+      .mafat-logo {
+        display: block;
+        justify-self: center;
+        width: 54mm;
+        max-width: 100%;
+        height: 25mm;
+        object-fit: contain;
+        object-position: right center;
+        transform: translateX(-5mm);
       }
 
       .eyebrow,
@@ -281,7 +309,11 @@
   <body>
     <main class="poster">
       <header class="header">
-        <img class="brand" src="./public/theris-lockup-he.png" alt="THERIS — המרכז הלאומי לאפיון חומרים בטמפרטורות גבוהות" />
+        <div class="brand-row">
+          <img class="brand" src="./public/theris-lockup-he.png" alt="THERIS — המרכז הלאומי לאפיון חומרים בטמפרטורות גבוהות" />
+          <img class="ministry-logo" src="./public/ministry-of-defense-logo-he.png" alt="משרד הביטחון" />
+          <img class="mafat-logo" src="./public/mafat-logo-he.png" alt="מפא״ת — הופכים חזון לביטחון" />
+        </div>
       </header>
 
       <section class="content">
