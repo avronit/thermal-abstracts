@@ -20,7 +20,6 @@ function App() {
             <span className="theris-wordmark" aria-hidden="true">THERIS</span>
             <span className="theris-institute" aria-hidden="true"><span>THERMAL RESEARCH</span><span>INSTITUTE OF ISRAEL</span></span>
           </div>
-          <a className="header-link" href="#submission">Submission portal <span aria-hidden="true">↘</span></a>
         </header>
         <div className="hero-content" id="top">
           <p className="eyebrow"><span className="live-dot" /> Registration and call for abstracts <span className="eyebrow-divider">/</span> December 15th, 2026</p>
