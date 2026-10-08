@@ -34,7 +34,7 @@ function App() {
           </a>
         </div>
         <div className="hero-footnote">
-          <span>Materials science · Thermal engineering · Space research</span>
+          <span>Material characterization, Simulation, Material development and production</span>
           <span>Abstract deadline <strong>15 November 2026</strong></span>
         </div>
       </section>
