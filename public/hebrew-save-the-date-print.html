@@ -1,14 +1,22 @@
 <!doctype html>
-<html lang="he">
+<html lang="he" dir="rtl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Save the date: the 4th Conference on Materials and Technologies for Extreme Conditions, December 15, 2026." />
-    <title>Save the Date | 4th Conference on Materials and Technologies for Extreme Conditions</title>
+    <meta name="description" content="שמרו את התאריך: הכנס הרביעי לחומרים ולטכנולוגיות לתנאי קיצון, 15 בדצמבר 2026." />
+    <title>שמרו את התאריך | הכנס הרביעי לחומרים ולטכנולוגיות לתנאי קיצון</title>
     <style>
       @page {
-        size: 145mm 247mm;
+        size: A4;
         margin: 0;
+      }
+
+      :root {
+        color-scheme: light;
+        font-family: Arial, Helvetica, sans-serif;
+        font-synthesis: none;
+        text-rendering: geometricPrecision;
+        -webkit-font-smoothing: antialiased;
       }
 
       * {
@@ -17,71 +25,303 @@
 
       html,
       body {
-        width: 145mm;
-        height: 247mm;
+        width: 210mm;
+        height: 297mm;
         margin: 0;
       }
 
       body {
-        background: #050d1b;
+        background: #080808;
+        color: #f8f6f0;
       }
 
       .poster {
         position: relative;
-        width: 145mm;
-        height: 247mm;
+        display: flex;
+        width: 210mm;
+        height: 297mm;
+        flex-direction: column;
+        overflow: hidden;
+        padding: 16mm 16mm 13mm;
+        background:
+          radial-gradient(ellipse at 97% 31%, rgba(206, 54, 21, .31), transparent 40%),
+          radial-gradient(ellipse at 92% 34%, rgba(245, 108, 42, .12), transparent 28%),
+          linear-gradient(145deg, #080808 5%, #100d0c 56%, #080808 100%);
+        direction: rtl;
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
       }
 
-      .poster-image {
-        display: block;
-        width: 100%;
-        height: 100%;
-      }
-
-      .register-link {
+      .poster::before,
+      .poster::after {
         position: absolute;
-        top: 90.0645%;
-        left: 14.2857%;
-        width: 71.4286%;
-        height: 6.7742%;
-        border-radius: 4mm;
-        color: transparent;
+        z-index: 0;
+        top: 47mm;
+        right: -39mm;
+        width: 118mm;
+        height: 118mm;
+        border: 1px solid rgba(255, 121, 60, .18);
+        border-radius: 50%;
+        content: "";
+        pointer-events: none;
+      }
+
+      .poster::after {
+        top: 57mm;
+        right: -29mm;
+        width: 98mm;
+        height: 98mm;
+        border-color: rgba(255, 121, 60, .12);
+      }
+
+      .header,
+      .content,
+      .footer {
+        position: relative;
+        z-index: 1;
+      }
+
+      .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid rgba(255, 255, 255, .24);
+        padding-bottom: 7mm;
+      }
+
+      .brand {
+        display: block;
+        width: 52mm;
+        max-width: 45vw;
+        height: auto;
+      }
+
+      .eyebrow,
+      .date-caption,
+      .deadline-label,
+      .footer {
+        font-size: 8pt;
+        font-weight: 700;
+        letter-spacing: 0;
+      }
+
+      .content {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        justify-content: center;
+        padding: 11mm 0 8mm;
+      }
+
+      .eyebrow {
+        margin: 0 0 6mm;
+        color: #ff8d31;
+        font-size: 8.5pt;
+      }
+
+      h1 {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 35pt;
+        font-weight: 800;
+        line-height: 1.08;
+      }
+
+      h1 span {
+        display: block;
+      }
+
+      h1 .conference {
+        margin: 1.5mm 0 3mm;
+        color: #ff8d31;
+        font-size: 51pt;
+      }
+
+      .title-row {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 64mm;
+        align-items: center;
+        gap: 6mm;
+      }
+
+      .title-diagram {
+        display: block;
+        width: 64mm;
+        height: 64mm;
+        object-fit: contain;
+      }
+
+      .description {
+        max-width: 148mm;
+        margin: 5mm 0 0;
+        color: #d3cec5;
+        font-size: 9.5pt;
+        line-height: 1.55;
+      }
+
+      .description strong {
+        color: #f8f6f0;
+      }
+
+      .date-block {
+        display: flex;
+        align-items: center;
+        gap: 7mm;
+        margin-top: 7mm;
+        border-top: 1px solid rgba(255, 255, 255, .25);
+        border-bottom: 1px solid rgba(255, 255, 255, .25);
+        padding: 5mm 0;
+      }
+
+      .date-day {
+        color: #ff8d31;
+        font-family: Impact, "Arial Narrow", "Helvetica Neue", sans-serif;
+        font-size: 66pt;
+        line-height: .85;
+        direction: ltr;
+      }
+
+      .date-caption {
+        color: #d3cec5;
+      }
+
+      .date-venue {
+        margin-right: auto;
+        color: #f8f6f0;
+        font-size: 16pt;
+        font-weight: 700;
+        text-align: right;
+      }
+
+      .date-month {
+        display: block;
+        margin-top: 1.5mm;
+        color: #fff;
+        font-size: 20pt;
+        font-weight: 800;
+      }
+
+      .date-year {
+        display: block;
+        margin-top: 1mm;
+        color: #ff8d31;
+        font-size: 12pt;
+        font-weight: 700;
+        direction: ltr;
+      }
+
+      .deadlines {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 7mm;
+        margin-top: 7mm;
+      }
+
+      .deadline-label {
+        display: block;
+        margin-bottom: 2mm;
+        color: #b7afa4;
+        font-size: 6.5pt;
+      }
+
+      .deadline-date {
+        color: #f8f6f0;
+        font-size: 11pt;
+        font-weight: 700;
+      }
+
+      .register {
+        display: inline-flex;
+        align-self: center;
+        align-items: center;
+        justify-content: center;
+        margin-top: 8mm;
+        background: #f05a38;
+        color: #080808;
+        padding: 4mm 7mm;
+        font-size: 14pt;
+        font-weight: 800;
+        text-align: center;
         text-decoration: none;
       }
 
-      .register-link:focus-visible {
-        outline: 1mm solid #fff;
-        outline-offset: 1mm;
+      .register span {
+        padding-right: 3mm;
+        font-size: 16pt;
+      }
+
+      .footer {
+        display: flex;
+        justify-content: space-between;
+        border-top: 1px solid rgba(255, 255, 255, .24);
+        padding-top: 5mm;
+        color: #b7afa4;
+        font-size: 6.5pt;
       }
 
       @media screen {
-        html,
         body {
-          width: 100%;
-          height: 100%;
-          min-height: 100%;
-        }
-
-        body {
-          display: grid;
-          min-height: 100svh;
-          place-items: center;
-          padding: 16px;
-        }
-
-        .poster {
-          width: min(100%, 610px);
-          height: auto;
-          aspect-ratio: 910 / 1550;
-          box-shadow: 0 12px 48px rgba(0, 0, 0, .4);
+          margin: 20px auto;
+          box-shadow: 0 8px 40px rgba(0, 0, 0, .35);
         }
       }
     </style>
   </head>
   <body>
     <main class="poster">
-      <img class="poster-image" src="./hebrew-save-the-date.png" alt="Save the date: 4th Conference on Materials and Technologies for Extreme Conditions, December 15, 2026, at Ben-Gurion University of the Negev. Abstract deadline: November 15, 2026. Registration deadline: December 8, 2026." />
-      <a class="register-link" href="https://avronit.github.io/thermal-abstracts/" aria-label="Register here at the conference webpage" title="Register here"></a>
+      <header class="header">
+        <img class="brand" src="./theris-lockup.png" alt="THERIS — המכון למחקר תרמי בישראל" />
+      </header>
+
+      <section class="content">
+        <p class="eyebrow">אפיון חומרים, סימולציה, פיתוח וייצור חומרים</p>
+        <div class="title-row">
+          <h1>
+            <span>הכנס</span>
+            <span class="conference">הרביעי</span>
+            <span>לחומרים ולטכנולוגיות</span>
+            <span>לתנאי קיצון</span>
+          </h1>
+          <img class="title-diagram" src="./materials-diagram.png" alt="תרשים מחקר חומרים" />
+        </div>
+        <p class="description">
+          <strong>הכנס הרביעי לחומרים ולטכנולוגיות לתנאי קיצון</strong>
+          מפגיש חוקרות וחוקרים, אנשי תעשייה, מומחי ביטחון וסטודנטים ליום של שיתוף ידע, חדשנות ושיתופי פעולה.
+          הכנס יציג מחקרים פורצי דרך, טכנולוגיות מתקדמות ויישומים מתפתחים בתחום החומרים וההנדסה לסביבות קיצוניות.
+          התוכנית תכלול הרצאות מוזמנות, הצגות טכניות, מושב פוסטרים לסטודנטים, הזדמנויות ליצירת קשרים מקצועיים
+          וסיור מודרך במתקני המחקר של <strong>THERIS</strong>, ותציע במה ייחודית למפגש עם חזית מדע החומרים וההנדסה בישראל.
+        </p>
+
+        <div class="date-block">
+          <div class="date-day">15</div>
+          <div class="date-caption">
+            תאריך הכנס
+            <span class="date-month">בדצמבר</span>
+            <span class="date-year">2026</span>
+          </div>
+          <div class="date-venue">אוניברסיטת בן-גוריון בנגב</div>
+        </div>
+
+        <div class="deadlines">
+          <div>
+            <span class="deadline-label">מועד אחרון להגשת תקצירים</span>
+            <span class="deadline-date">15 בנובמבר 2026</span>
+          </div>
+          <div>
+            <span class="deadline-label">מועד אחרון להרשמה</span>
+            <span class="deadline-date">8 בדצמבר 2026</span>
+          </div>
+        </div>
+
+        <a class="register" href="https://avronit.github.io/thermal-abstracts/" aria-label="להרשמה באתר הכנס">
+          להרשמה <span aria-hidden="true">↗</span>
+        </a>
+      </section>
+
+      <footer class="footer">
+        <span>המכון למחקר תרמי בישראל</span>
+        <span>חומרים לעולם חם יותר.</span>
+      </footer>
     </main>
   </body>
 </html>
