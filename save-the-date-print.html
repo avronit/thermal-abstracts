@@ -94,13 +94,6 @@
         height: auto;
       }
 
-      .header-diagram {
-        display: block;
-        width: 27mm;
-        height: 27mm;
-        object-fit: contain;
-      }
-
       .eyebrow,
       .date-caption,
       .deadline-label,
@@ -150,6 +143,20 @@
         margin: 1.5mm 0 3mm;
         color: #ff8d31;
         font-size: 51pt;
+      }
+
+      .title-row {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 58mm;
+        align-items: center;
+        gap: 6mm;
+      }
+
+      .title-diagram {
+        display: block;
+        width: 58mm;
+        height: 58mm;
+        object-fit: contain;
       }
 
       .description {
@@ -275,18 +282,20 @@
     <main class="poster">
       <header class="header">
         <img class="brand" src="./public/theris-lockup.png" alt="THERIS, Thermal Research Institute of Israel" />
-        <img class="header-diagram" src="./public/materials-diagram.png" alt="Materials research diagram" />
       </header>
 
       <section class="content">
         <p class="eyebrow">Material characterization, Simulation, Material development and production</p>
-        <h1>
-          <span>The 4<sup class="ordinal-suffix">th</sup></span>
-          <span class="conference">Conference</span>
-          <span>on Materials and</span>
-          <span>Technologies for</span>
-          <span>Extreme Conditions</span>
-        </h1>
+        <div class="title-row">
+          <h1>
+            <span>The 4<sup class="ordinal-suffix">th</sup></span>
+            <span class="conference">Conference</span>
+            <span>on Materials and</span>
+            <span>Technologies for</span>
+            <span>Extreme Conditions</span>
+          </h1>
+          <img class="title-diagram" src="./public/materials-diagram.png" alt="Materials research diagram" />
+        </div>
         <p class="description">
           <strong>The 4<sup class="ordinal-suffix">th</sup> Conference on Materials and Technologies for Extreme Conditions</strong>
           brings together researchers, industry professionals, defense experts,
