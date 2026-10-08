@@ -210,8 +210,8 @@ a { color: inherit; }
 #root { width: 100%; max-width: none; min-height: 100svh; margin: 0; border: 0; text-align: left; display: block; }
 
 .hero {
-  min-height: 660px;
-  height: min(820px, 100svh);
+  min-height: 560px;
+  height: min(700px, 86svh);
   position: relative;
   overflow: hidden;
   display: flex;
@@ -324,7 +324,7 @@ a { color: inherit; }
 @keyframes rise-in { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes sun-arrive { from { opacity: .35; transform: scale(1.035); } to { opacity: 1; transform: scale(1); } }
 @media (max-width: 850px) {
-  .hero { min-height: 620px; height: 88svh; padding: 23px 28px 24px; }
+  .hero { min-height: 560px; height: 82svh; padding: 23px 28px 24px; }
   .hero-sun { width: 100%; height: 112%; right: -30%; top: -4%; opacity: .83; }
   .hero-shade { background: linear-gradient(90deg, #050505 0%, rgba(5,5,5,.96) 24%, rgba(5,5,5,.75) 58%, rgba(5,5,5,.25) 100%), linear-gradient(0deg, rgba(0,0,0,.7), transparent 35%); }
   .hero-content { width: min(650px, 95%); padding: 50px 0; }
@@ -334,7 +334,7 @@ a { color: inherit; }
   .submission-layout { grid-template-columns: minmax(0, 1fr) 220px; gap: 38px; }
 }
 @media (max-width: 620px) {
-  .hero { min-height: 650px; height: 92svh; max-height: 800px; padding: 19px 21px 20px; }
+  .hero { min-height: 600px; height: 88svh; max-height: 720px; padding: 19px 21px 20px; }
   .site-header { align-items: flex-start; flex-wrap: wrap; gap: 10px; }
   .theris-lockup { flex-basis: min(440px, 78vw); width: min(440px, 78vw); }
   .header-link { font-size: 10px; }
