@@ -14,6 +14,11 @@ function App() {
           alt="Close-up view of the Sun's bright, textured surface"
         />
         <div className="hero-shade" />
+        <img
+          className="research-diagram"
+          src={`${import.meta.env.BASE_URL}materials-diagram.png`}
+          alt="Research themes: materials characterization, materials production and processing, and simulation"
+        />
         <header className="site-header">
           <div className="theris-lockup" role="img" aria-label="THERIS, Thermal Research Institute of Israel, theris@bgu.ac.il">
             <img className="theris-flame" src={`${import.meta.env.BASE_URL}theris-flame.png`} alt="" />
@@ -32,13 +37,6 @@ function App() {
           <span>Materials science · Thermal engineering · Space research</span>
           <span>Abstract deadline <strong>15 November 2026</strong></span>
         </div>
-      </section>
-
-      <section className="research-showcase" aria-label="Conference research themes">
-        <img
-          src={`${import.meta.env.BASE_URL}materials-diagram.png`}
-          alt="Research themes: materials characterization, materials production and processing, and simulation"
-        />
       </section>
 
       <section className="submission-section" id="submission" aria-labelledby="submission-heading">
