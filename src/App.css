@@ -226,7 +226,7 @@ a { color: inherit; }
 .hero-shade { position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, #050505 0%, #050505 33%, rgba(5,5,5,.93) 45%, rgba(5,5,5,.47) 65%, rgba(5,5,5,.06) 100%), linear-gradient(0deg, rgba(0,0,0,.62), transparent 24%); }
 .research-diagram { position: absolute; z-index: 0; top: 50%; right: clamp(24px, 6vw, 96px); width: clamp(230px, 29vw, 410px); height: auto; transform: translateY(-50%); filter: drop-shadow(0 10px 26px rgba(0, 0, 0, .38)); }
 .site-header { display: flex; align-items: center; justify-content: space-between; gap: 24px; position: relative; z-index: 1; animation: rise-in .65s .05s both; }
-.theris-lockup { position: relative; flex: 0 1 480px; width: min(480px, 42vw); aspect-ratio: 5 / 2; overflow: hidden; background: #030303; container-type: inline-size; color: #ff9900; }
+.theris-lockup { position: relative; flex: 0 1 440px; width: min(440px, 39vw); aspect-ratio: 5 / 2; overflow: hidden; background: #030303; container-type: inline-size; color: #ff9900; }
 .theris-flame { position: absolute; left: 6.6%; top: 22.8%; width: 14.4%; height: 54.4%; object-fit: contain; }
 .theris-wordmark { position: absolute; left: 33.5%; top: 26%; color: #ff9900; font: 700 12.4cqw/1 Arial, Helvetica, sans-serif; letter-spacing: .2cqw; }
 .theris-institute { position: absolute; left: 33.7%; top: 68%; display: flex; flex-direction: column; gap: 1.3cqw; color: #ff9900; font: 500 4.1cqw/1 Arial, Helvetica, sans-serif; letter-spacing: .3cqw; white-space: nowrap; }
@@ -343,7 +343,7 @@ a { color: inherit; }
 @media (max-width: 620px) {
   .hero { min-height: 600px; height: 88svh; max-height: 720px; padding: 19px 21px 20px; }
   .site-header { align-items: flex-start; flex-wrap: wrap; gap: 10px; }
-  .theris-lockup { flex-basis: min(380px, 68vw); width: min(380px, 68vw); }
+  .theris-lockup { flex-basis: min(350px, 64vw); width: min(350px, 64vw); }
   .header-link { font-size: 10px; }
   .hero-sun { width: 137%; height: 92%; right: -72%; top: 5%; opacity: .76; }
   .hero-shade { background: linear-gradient(90deg, #050505 0%, rgba(5,5,5,.94) 40%, rgba(5,5,5,.57) 75%, rgba(5,5,5,.22) 100%), linear-gradient(0deg, rgba(0,0,0,.7), transparent 42%); }
