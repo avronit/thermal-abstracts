@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Save the Date | 4th Conference on Materials and Technologies for Extreme Conditions</title>
+    <style>
+      @page {
+        size: A4;
+        margin: 0;
+      }
+
+      :root {
+        color-scheme: light;
+        font-family: Arial, Helvetica, sans-serif;
+        font-synthesis: none;
+        text-rendering: geometricPrecision;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        width: 210mm;
+        height: 297mm;
+        margin: 0;
+      }
+
+      body {
+        background: #080808;
+        color: #f8f6f0;
+      }
+
+      .poster {
+        position: relative;
+        display: flex;
+        width: 210mm;
+        height: 297mm;
+        flex-direction: column;
+        overflow: hidden;
+        padding: 16mm 16mm 13mm;
+        background:
+          radial-gradient(ellipse at 97% 31%, rgba(206, 54, 21, .31), transparent 40%),
+          radial-gradient(ellipse at 92% 34%, rgba(245, 108, 42, .12), transparent 28%),
+          linear-gradient(145deg, #080808 5%, #100d0c 56%, #080808 100%);
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+      }
+
+      .poster::before,
+      .poster::after {
+        position: absolute;
+        z-index: 0;
+        top: 47mm;
+        right: -39mm;
+        width: 118mm;
+        height: 118mm;
+        border: 1px solid rgba(255, 121, 60, .18);
+        border-radius: 50%;
+        content: "";
+        pointer-events: none;
+      }
+
+      .poster::after {
+        top: 57mm;
+        right: -29mm;
+        width: 98mm;
+        height: 98mm;
+        border-color: rgba(255, 121, 60, .12);
+      }
+
+      .header,
+      .content,
+      .footer {
+        position: relative;
+        z-index: 1;
+      }
+
+      .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid rgba(255, 255, 255, .24);
+        padding-bottom: 7mm;
+      }
+
+      .brand {
+        color: #ff8d31;
+        font-size: 23pt;
+        font-weight: 800;
+        letter-spacing: .09em;
+      }
+
+      .brand small {
+        display: block;
+        margin-top: 1.5mm;
+        color: #c7bcb0;
+        font-size: 6.5pt;
+        font-weight: 600;
+        letter-spacing: .2em;
+      }
+
+      .save-label,
+      .eyebrow,
+      .date-caption,
+      .deadline-label,
+      .footer {
+        font-size: 8pt;
+        font-weight: 700;
+        letter-spacing: .18em;
+        text-transform: uppercase;
+      }
+
+      .save-label {
+        color: #ff8d31;
+        text-align: right;
+      }
+
+      .content {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        justify-content: center;
+        padding: 11mm 0 8mm;
+      }
+
+      .eyebrow {
+        margin: 0 0 6mm;
+        color: #ff8d31;
+        font-size: 8.5pt;
+      }
+
+      h1 {
+        margin: 0;
+        font-family: Impact, "Arial Narrow", "Helvetica Neue", sans-serif;
+        font-size: 39pt;
+        font-weight: 700;
+        letter-spacing: .005em;
+        line-height: .98;
+        text-transform: uppercase;
+      }
+
+      h1 span {
+        display: block;
+      }
+
+      h1 .conference {
+        margin: 1.5mm 0 3mm;
+        color: #ff8d31;
+        font-size: 57pt;
+      }
+
+      .description {
+        max-width: 148mm;
+        margin: 7mm 0 0;
+        color: #d3cec5;
+        font-size: 11pt;
+        line-height: 1.55;
+      }
+
+      .date-block {
+        display: flex;
+        align-items: center;
+        gap: 7mm;
+        margin-top: 12mm;
+        border-top: 1px solid rgba(255, 255, 255, .25);
+        border-bottom: 1px solid rgba(255, 255, 255, .25);
+        padding: 7mm 0;
+      }
+
+      .date-day {
+        color: #ff8d31;
+        font-family: Impact, "Arial Narrow", "Helvetica Neue", sans-serif;
+        font-size: 66pt;
+        line-height: .85;
+      }
+
+      .date-caption {
+        color: #d3cec5;
+        font-size: 8pt;
+      }
+
+      .date-month {
+        display: block;
+        margin-top: 1.5mm;
+        color: #fff;
+        font-size: 20pt;
+        font-weight: 800;
+        letter-spacing: .05em;
+      }
+
+      .date-year {
+        display: block;
+        margin-top: 1mm;
+        color: #ff8d31;
+        font-size: 12pt;
+        font-weight: 700;
+        letter-spacing: .18em;
+      }
+
+      .deadlines {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 7mm;
+        margin-top: 7mm;
+      }
+
+      .deadline-label {
+        display: block;
+        margin-bottom: 2mm;
+        color: #b7afa4;
+        font-size: 6.5pt;
+      }
+
+      .deadline-date {
+        color: #f8f6f0;
+        font-size: 11pt;
+        font-weight: 700;
+      }
+
+      .register {
+        display: block;
+        margin-top: 13mm;
+        background: #f05a38;
+        color: #080808;
+        padding: 5mm 7mm;
+        font-size: 14pt;
+        font-weight: 800;
+        letter-spacing: .12em;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .register span {
+        padding-left: 3mm;
+        font-size: 16pt;
+      }
+
+      .web-address {
+        margin: 3mm 0 0;
+        color: #c7bcb0;
+        font-size: 8pt;
+        text-align: center;
+      }
+
+      .footer {
+        display: flex;
+        justify-content: space-between;
+        border-top: 1px solid rgba(255, 255, 255, .24);
+        padding-top: 5mm;
+        color: #b7afa4;
+        font-size: 6.5pt;
+      }
+
+      @media screen {
+        body {
+          margin: 20px auto;
+          box-shadow: 0 8px 40px rgba(0, 0, 0, .35);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="poster">
+      <header class="header">
+        <div class="brand">
+          THERIS
+          <small>THERMAL RESEARCH INSTITUTE OF ISRAEL</small>
+        </div>
+        <div class="save-label">Save<br />the date</div>
+      </header>
+
+      <section class="content">
+        <p class="eyebrow">Materials science · Thermal engineering · Space research</p>
+        <h1>
+          <span>The 4th</span>
+          <span class="conference">Conference</span>
+          <span>on Materials and</span>
+          <span>Technologies for</span>
+          <span>Extreme Conditions</span>
+        </h1>
+        <p class="description">
+          Join researchers and innovators exploring materials and technologies
+          for the most demanding environments.
+        </p>
+
+        <div class="date-block">
+          <div class="date-day">15</div>
+          <div class="date-caption">
+            Conference date
+            <span class="date-month">December</span>
+            <span class="date-year">2026</span>
+          </div>
+        </div>
+
+        <div class="deadlines">
+          <div>
+            <span class="deadline-label">Abstract deadline</span>
+            <span class="deadline-date">15 November 2026</span>
+          </div>
+          <div>
+            <span class="deadline-label">Registration deadline</span>
+            <span class="deadline-date">08 December 2026</span>
+          </div>
+        </div>
+
+        <a class="register" href="https://avronit.github.io/thermal-abstracts/" aria-label="Register here at the conference webpage">
+          Register here <span aria-hidden="true">↗</span>
+        </a>
+        <p class="web-address">avronit.github.io/thermal-abstracts</p>
+      </section>
+
+      <footer class="footer">
+        <span>Thermal Research Institute of Israel</span>
+        <span>Materials for a hotter world.</span>
+      </footer>
+    </main>
+  </body>
+</html>
