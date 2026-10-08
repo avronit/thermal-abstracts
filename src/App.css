@@ -252,6 +252,9 @@ a { color: inherit; }
 .hero-footnote { display: flex; justify-content: space-between; gap: 20px; color: #c4c3bd; font-size: 11px; letter-spacing: .02em; position: relative; z-index: 1; }
 .hero-footnote strong { color: #fff; font-weight: 600; margin-left: 7px; }
 
+.research-showcase { display: flex; justify-content: center; padding: clamp(36px, 5vw, 64px) 24px; background: #080d17; }
+.research-showcase img { display: block; width: min(100%, 398px); height: auto; }
+
 .submission-section { padding: 102px clamp(24px, 8vw, 128px) 110px; background: var(--paper); }
 .preview-banner { max-width: 1320px; margin: 0 auto 42px; padding: 12px 15px; border-left: 3px solid var(--ember); background: #fff0e9; color: #6b2c1b; font-size: 12px; }
 .section-heading { max-width: 1320px; margin: 0 auto 66px; display: flex; align-items: end; justify-content: space-between; gap: 48px; }
