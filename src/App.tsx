@@ -66,14 +66,26 @@ function App() {
               <p className="section-index">02 <span>/</span> Research presentation and students poster session</p>
               <h3>Submit an abstract</h3>
               <p>Send your abstract and upload your poster for the materials research program.</p>
-              <div className="guideline-block">
-                <p className="aside-label">Submission notes</p>
-                <ul>
-                  <li>Abstracts must be written in English.</li>
-                  <li>Keep the abstract to 250 words or fewer.</li>
-                  <li>Include objective, method, key results, and conclusion.</li>
-                  <li>One author should be selected as the presenter.</li>
-                </ul>
+              <div className="guidelines-layout">
+                <div className="guideline-block">
+                  <p className="aside-label">Submission notes</p>
+                  <ul>
+                    <li>Abstracts must be written in English.</li>
+                    <li>Keep the abstract to 250 words or fewer.</li>
+                    <li>Include objective, method, key results, and conclusion.</li>
+                    <li>One author should be selected as the presenter.</li>
+                  </ul>
+                </div>
+                <aside className="getting-there" aria-labelledby="getting-there-heading">
+                  <p className="aside-label" id="getting-there-heading">Getting There:</p>
+                  <p><strong>Train:</strong> Be'er Sheva North Train Station</p>
+                  <p className="getting-there-subheading">Nearby parking lots:</p>
+                  <ul>
+                    <li>Sports Center parking lot</li>
+                    <li>Ben-Gurion University external parking lot</li>
+                    <li>University North Train Station parking lot</li>
+                  </ul>
+                </aside>
               </div>
               <div className="submission-actions">
                 <a className="button button-dark" href={submissionFormUrl} target="_blank" rel="noreferrer">Submit <span aria-hidden="true">↗</span></a>

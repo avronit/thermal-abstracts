@@ -287,7 +287,15 @@ a { color: inherit; }
 .form-choice .submission-actions .button { margin-top: 0; }
 .submission-contact { margin: 0; color: #686962; font-size: 14px; line-height: 1.6; }
 .submission-contact a { color: var(--ink); text-decoration-color: #d85436; text-underline-offset: 3px; }
-.form-choice .guideline-block { padding: 24px 0 0; border-bottom: 0; }
+.guidelines-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(200px, .8fr); gap: 28px; align-items: start; padding-top: 24px; }
+.form-choice .guidelines-layout .guideline-block { padding: 0; border-bottom: 0; }
+.getting-there { padding: 18px; border: 1px solid #c9cac4; }
+.getting-there p { margin: 13px 0 0; color: #55564f; font-size: 13px; line-height: 1.55; }
+.getting-there p strong { color: var(--ink); }
+.getting-there .getting-there-subheading { margin-top: 16px; color: var(--ink); font-weight: 600; }
+.getting-there ul { list-style: none; padding: 0; margin: 10px 0 0; }
+.getting-there li { padding: 0 0 8px 14px; position: relative; color: #55564f; font-size: 13px; line-height: 1.5; }
+.getting-there li::before { content: ''; width: 5px; height: 5px; position: absolute; top: 7px; left: 0; background: var(--ember); }
 .form-block { padding: 32px 0 41px; border-top: 1px solid #bfc0ba; }
 .form-block-heading { display: flex; gap: 15px; align-items: flex-start; margin-bottom: 28px; }
 .form-number { flex: 0 0 28px; width: 28px; height: 28px; display: grid; place-items: center; border: 1px solid #a8a9a2; border-radius: 50%; font-size: 14px; }
@@ -345,6 +353,8 @@ a { color: inherit; }
 @keyframes rise-in { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes sun-arrive { from { opacity: .35; transform: scale(1.035); } to { opacity: 1; transform: scale(1); } }
 @media (max-width: 850px) {
+  .guidelines-layout { grid-template-columns: minmax(0, 1fr); gap: 22px; }
+  .getting-there { max-width: 100%; }
   .hero { min-height: 560px; height: 82svh; padding: 23px 28px 24px; }
   .hero-sun { width: 100%; height: 112%; right: -30%; top: -4%; opacity: .83; }
   .hero-shade { background: linear-gradient(90deg, #050505 0%, rgba(5,5,5,.96) 24%, rgba(5,5,5,.75) 58%, rgba(5,5,5,.25) 100%), linear-gradient(0deg, rgba(0,0,0,.7), transparent 35%); }
