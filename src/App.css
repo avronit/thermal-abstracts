@@ -228,7 +228,10 @@ a { color: inherit; }
 .site-header { display: flex; align-items: center; justify-content: space-between; gap: 24px; position: relative; z-index: 1; animation: rise-in .65s .05s both; }
 .partner-logos { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, .75fr) minmax(0, .75fr); align-items: center; gap: clamp(14px, 4vw, 56px); width: min(100%, 720px); }
 .partner-logo { display: block; width: 100%; height: auto; object-fit: contain; }
-.partner-logo-theris { max-width: 252px; }
+.partner-logo-theris { position: relative; width: 100%; max-width: 272px; aspect-ratio: 272 / 130; }
+.theris-lockup-flame, .theris-lockup-type { position: absolute; inset-block: 0; display: block; background-repeat: no-repeat; background-size: auto 100%; }
+.theris-lockup-flame { left: 0; width: 65px; background-position: left center; }
+.theris-lockup-type { right: 0; width: calc(100% - 65px); background-position: calc(100% - 11px) center; }
 .partner-logo-ministry { justify-self: center; max-width: 100px; max-height: 116px; }
 .partner-logo-mafat { justify-self: center; max-width: 96px; max-height: 116px; }
 .header-link { color: #f5f3ed; font-size: 12px; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,.42); padding: 8px 0; }
@@ -350,7 +353,7 @@ a { color: inherit; }
 @media (max-width: 620px) {
   .hero { min-height: 600px; height: 88svh; max-height: 720px; padding: 19px 21px 20px; }
   .site-header { align-items: flex-start; flex-wrap: wrap; gap: 10px; }
-  .partner-logos { grid-template-columns: minmax(0, 1.25fr) minmax(0, .75fr) minmax(0, .75fr); gap: 10px; }
+  .partner-logos { grid-template-columns: minmax(0, 1.4fr) minmax(0, .75fr) minmax(0, .75fr); gap: 10px; }
   .header-link { font-size: 10px; }
   .hero-sun { width: 137%; height: 92%; right: -72%; top: 5%; opacity: .76; }
   .hero-shade { background: linear-gradient(90deg, #050505 0%, rgba(5,5,5,.94) 40%, rgba(5,5,5,.57) 75%, rgba(5,5,5,.22) 100%), linear-gradient(0deg, rgba(0,0,0,.7), transparent 42%); }
