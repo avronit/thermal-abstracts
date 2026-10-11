@@ -75,7 +75,13 @@ function App() {
                   <li>One author should be selected as the presenter.</li>
                 </ul>
               </div>
-              <a className="button button-dark" href={submissionFormUrl} target="_blank" rel="noreferrer">Submit <span aria-hidden="true">↗</span></a>
+              <div className="submission-actions">
+                <a className="button button-dark" href={submissionFormUrl} target="_blank" rel="noreferrer">Submit <span aria-hidden="true">↗</span></a>
+                <p className="submission-contact" dir="ltr">
+                  <span>Additional information:</span>{' '}
+                  <span dir="ltr"><a href="mailto:theris@bgu.ac.il">theris@bgu.ac.il</a>, <a href="tel:+97286472748">08-6472748</a></span>
+                </p>
+              </div>
             </div>
           </div>
 
