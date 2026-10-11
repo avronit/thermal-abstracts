@@ -280,6 +280,7 @@ a { color: inherit; }
 .form-choice { padding: 24px 0 28px; border-bottom: 1px solid #c9cac4; }
 .form-choice h3 { margin: 13px 0 7px; color: var(--ink); font: 600 25px/1.15 var(--font-display); text-transform: uppercase; }
 .form-choice p:not(.section-index) { max-width: 470px; margin: 0; color: #55564f; font-size: 13px; line-height: 1.65; }
+.form-choice .registration-note { margin-top: 8px; color: #686962; }
 .form-choice .button { margin-top: 16px; }
 .form-choice .guideline-block { padding: 24px 0 0; border-bottom: 0; }
 .form-block { padding: 32px 0 41px; border-top: 1px solid #bfc0ba; }

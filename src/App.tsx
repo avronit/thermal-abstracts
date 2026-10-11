@@ -59,6 +59,7 @@ function App() {
               <p className="section-index">01 <span>/</span> Conference participation</p>
               <h3>Register for the conference</h3>
               <p>Complete your conference registration and participant details.</p>
+              <p className="registration-note">Please note that registration is free and subject to approval. Participation is not guaranteed; confirmation will be provided based on venue capacity and availability.</p>
               <a className="button button-outline" href={registrationFormUrl} target="_blank" rel="noreferrer">Registration <span aria-hidden="true">↗</span></a>
             </div>
             <div className="form-choice">
