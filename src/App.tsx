@@ -20,10 +20,22 @@ function App() {
           alt="Research themes: materials characterization, materials production and processing, and simulation"
         />
         <header className="site-header">
-          <div className="theris-lockup" role="img" aria-label="THERIS, Thermal Research Institute of Israel, theris@bgu.ac.il">
-            <img className="theris-flame" src={`${import.meta.env.BASE_URL}theris-flame.png`} alt="" />
-            <span className="theris-wordmark" aria-hidden="true">THERIS</span>
-            <span className="theris-institute" aria-hidden="true"><span>THERMAL RESEARCH</span><span>INSTITUTE OF ISRAEL</span></span>
+          <div className="partner-logos" role="group" aria-label="Conference partners">
+            <img
+              className="partner-logo partner-logo-theris"
+              src={`${import.meta.env.BASE_URL}theris-lockup-he.png`}
+              alt="THERIS, Thermal Research Institute of Israel"
+            />
+            <img
+              className="partner-logo partner-logo-ministry"
+              src={`${import.meta.env.BASE_URL}ministry-of-defense-logo-he.png`}
+              alt="Israel Ministry of Defense"
+            />
+            <img
+              className="partner-logo partner-logo-mafat"
+              src={`${import.meta.env.BASE_URL}mafat-logo-he.png`}
+              alt="MAFAT, Directorate of Defense Research and Development"
+            />
           </div>
         </header>
         <div className="hero-content" id="top">
