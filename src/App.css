@@ -240,7 +240,9 @@ a { color: inherit; }
 .hero-content { width: 100%; margin: 0; padding: 58px 0 70px; animation: rise-in .75s .15s both; }
 .eyebrow, .section-index, .aside-label { margin: 0; font-size: 14px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
 .eyebrow { display: flex; align-items: center; gap: 14px; color: #d9d8d1; font-size: 16px; }
-.hero-date { display: inline-flex; align-items: center; gap: 5px; }
+.hero-date { display: inline-flex; flex-direction: column; align-items: flex-start; gap: 3px; }
+.hero-date-line { display: inline-flex; align-items: center; gap: 5px; }
+.hero-location { color: #d9d8d1; font-size: 12px; font-weight: 600; letter-spacing: .03em; text-transform: none; }
 .hero-date-number { font: inherit; }
 .live-dot { flex: 0 0 11px; width: 11px; height: 11px; border-radius: 50%; background: var(--ember); box-shadow: 0 0 13px rgba(255,104,64,.8); }
 .eyebrow-divider { color: var(--ember); }
