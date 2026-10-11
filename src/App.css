@@ -239,7 +239,7 @@ a { color: inherit; }
 .hero-date-number { font: inherit; }
 .live-dot { flex: 0 0 11px; width: 11px; height: 11px; border-radius: 50%; background: var(--ember); box-shadow: 0 0 13px rgba(255,104,64,.8); }
 .eyebrow-divider { color: var(--ember); }
-.hero h1 { color: #fff; font-family: var(--font-display); font-weight: 600; font-size: clamp(44px, 5.4vw, 78px); line-height: .93; letter-spacing: 0; margin: 25px 0 23px; text-transform: uppercase; max-width: 900px; }
+.hero h1 { color: #fff; font-family: var(--font-display); font-weight: 600; font-size: clamp(42px, 5.1vw, 74px); line-height: .93; letter-spacing: 0; margin: 25px 0 23px; text-transform: uppercase; max-width: 900px; }
 .ordinal-suffix { font-size: .42em; line-height: 0; text-transform: lowercase; vertical-align: super; }
 .hero-copy { max-width: 480px; color: #d2d0c9; font-size: 16px; line-height: 1.65; }
 .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 28px; margin-top: 32px; }
@@ -335,7 +335,7 @@ a { color: inherit; }
   .hero-sun { width: 100%; height: 112%; right: -30%; top: -4%; opacity: .83; }
   .hero-shade { background: linear-gradient(90deg, #050505 0%, rgba(5,5,5,.96) 24%, rgba(5,5,5,.75) 58%, rgba(5,5,5,.25) 100%), linear-gradient(0deg, rgba(0,0,0,.7), transparent 35%); }
   .hero-content { width: min(650px, 62%); padding: 38px 0; }
-  .hero h1 { font-size: clamp(42px, 7.5vw, 60px); }
+  .hero h1 { font-size: clamp(40px, 7.1vw, 56px); }
   .submission-section { padding: 76px 30px 82px; }
   .section-heading { margin-bottom: 45px; }
   .submission-layout { grid-template-columns: minmax(0, 1fr) 220px; gap: 38px; }
@@ -349,7 +349,7 @@ a { color: inherit; }
   .hero-shade { background: linear-gradient(90deg, #050505 0%, rgba(5,5,5,.94) 40%, rgba(5,5,5,.57) 75%, rgba(5,5,5,.22) 100%), linear-gradient(0deg, rgba(0,0,0,.7), transparent 42%); }
   .hero-content { width: 64%; padding: 18px 0 24px; }
   .research-diagram { top: 53%; right: 12px; width: clamp(136px, 35vw, 210px); opacity: .95; }
-  .hero h1 { font-size: clamp(30px, 8vw, 42px); margin: 16px 0 14px; }
+  .hero h1 { font-size: clamp(29px, 7.6vw, 39px); margin: 16px 0 14px; }
   .hero-copy { max-width: 365px; font-size: 14px; }
   .hero-actions { gap: 14px 20px; margin-top: 25px; }
   .hero-footnote { align-items: flex-start; flex-direction: column; gap: 6px; font-size: 10px; }
