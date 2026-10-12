@@ -21,10 +21,11 @@ function App() {
         />
         <header className="site-header">
           <div className="partner-logos" role="group" aria-label="Conference partners">
-            <div className="partner-logo-theris" role="img" aria-label="THERIS, Thermal Research Institute of Israel">
-              <span className="theris-lockup-flame" style={{ backgroundImage: `url(${import.meta.env.BASE_URL}theris-lockup-he.png)` }} />
-              <span className="theris-lockup-type" style={{ backgroundImage: `url(${import.meta.env.BASE_URL}theris-lockup-he.png)` }} />
-            </div>
+            <img
+              className="partner-logo partner-logo-theris"
+              src={`${import.meta.env.BASE_URL}theris-lockup-he.png`}
+              alt="THERIS, Thermal Research Institute of Israel"
+            />
             <img
               className="partner-logo partner-logo-ministry"
               src={`${import.meta.env.BASE_URL}ministry-of-defense-logo-he.png`}
