@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>תג שם | עינת סטרומזה | רקע הרול-אפ</title>
+    <style>
+      @page {
+        size: 110mm 75mm;
+        margin: 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        width: 110mm;
+        height: 75mm;
+        margin: 0;
+      }
+
+      body {
+        color: #fffaf2;
+        font-family: Arial, Helvetica, sans-serif;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .tag {
+        display: flex;
+        width: 110mm;
+        height: 75mm;
+        flex-direction: column;
+        overflow: hidden;
+        background: #8e1b0b;
+      }
+
+      .header {
+        display: flex;
+        height: 17mm;
+        flex: 0 0 17mm;
+        overflow: hidden;
+        background: #fff;
+      }
+
+      .brand-strip {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top;
+      }
+
+      .scene {
+        position: relative;
+        display: flex;
+        flex: 1;
+        align-items: center;
+        justify-content: center;
+        padding: 2mm 6mm;
+        background:
+          linear-gradient(180deg, rgba(36, 5, 2, .4), rgba(36, 5, 2, .72)),
+          url("./sun-closeup.png") center / cover no-repeat;
+      }
+
+      .diagram {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        display: block;
+        width: 62mm;
+        height: 41mm;
+        object-fit: contain;
+        opacity: .42;
+        transform: translate(-50%, -50%);
+      }
+
+      .identity {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 2mm;
+      }
+
+      .name {
+        width: 100%;
+        border-top: 1mm solid #e77a13;
+        border-bottom: 1mm solid #e77a13;
+        padding: 2.5mm 2mm;
+        background: rgba(255, 250, 242, .88);
+        color: #25100b;
+        font-size: 25pt;
+        font-weight: 700;
+        line-height: 1.35;
+        text-align: center;
+      }
+
+      .conference {
+        max-width: 100%;
+        color: #fff2dd;
+        font-size: 10pt;
+        font-weight: 700;
+        line-height: 1.55;
+        text-align: center;
+        text-shadow: 0 1px 3px #300800;
+        white-space: nowrap;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="tag">
+      <header class="header">
+        <img class="brand-strip" src="./role-up.png" alt="לוגו הכנס: THERIS, אוניברסיטת בן-גוריון, משרד הביטחון ומפא״ת" />
+      </header>
+      <section class="scene">
+        <img class="diagram" src="./materials-diagram.png" alt="תרשים איפיון, פיתוח וסימולציה של חומרים" />
+        <div class="identity">
+          <div class="conference">הכנס הרביעי לחומרים ולטכנולוגיות בתנאי קיצון</div>
+          <div class="name">עינת סטרומזה</div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
