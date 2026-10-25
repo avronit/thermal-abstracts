@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>תג שם | עינת סטרומזה | צד אחורי</title>
+    <style>
+      @page {
+        size: 110mm 75mm;
+        margin: 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        width: 110mm;
+        height: 75mm;
+        margin: 0;
+      }
+
+      body {
+        color: #fffaf2;
+        font-family: Arial, Helvetica, sans-serif;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .tag {
+        display: flex;
+        width: 110mm;
+        height: 75mm;
+        flex-direction: column;
+        overflow: hidden;
+        background: #8e1b0b;
+      }
+
+      .header {
+        display: flex;
+        height: 17mm;
+        flex: 0 0 17mm;
+        overflow: hidden;
+        background: #fff;
+      }
+
+      .brand-strip {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top;
+      }
+
+      .scene {
+        position: relative;
+        display: flex;
+        flex: 1;
+        align-items: center;
+        justify-content: center;
+        padding: 2mm 6mm;
+        background:
+          linear-gradient(180deg, rgba(36, 5, 2, .4), rgba(36, 5, 2, .72)),
+          url("./sun-closeup.png") center / cover no-repeat;
+      }
+
+      .schedule {
+        display: grid;
+        width: 100mm;
+        height: 54mm;
+        grid-template-rows: repeat(15, minmax(0, 1fr));
+        padding: 1mm 2mm;
+        background: #fff;
+        color: #171717;
+        direction: ltr;
+        font-size: 6.5pt;
+        line-height: 1;
+      }
+
+      .schedule-row {
+        display: grid;
+        min-width: 0;
+        grid-template-columns: minmax(0, 1fr) 21mm;
+        align-items: center;
+      }
+
+      .schedule-description {
+        overflow: hidden;
+        padding-right: 1.5mm;
+        direction: rtl;
+        text-align: right;
+        white-space: nowrap;
+      }
+
+      .schedule-time {
+        color: #174a7e;
+        direction: ltr;
+        font-size: 6pt;
+        font-weight: 700;
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="tag">
+      <header class="header">
+        <img class="brand-strip" src="./role-up.png" alt="לוגו הכנס: THERIS, אוניברסיטת בן-גוריון, משרד הביטחון ומפא״ת" />
+      </header>
+      <section class="scene">
+        <div class="schedule" role="table" aria-label="תוכנית הכנס לפי שעות">
+          <div class="schedule-row" role="row"><span class="schedule-description" role="cell">התכנסות, רישום וכיבוד בוקר</span><span class="schedule-time" role="cell">08:00–08:45</span></div>
+          <div class="schedule-row" role="row"><span class="schedule-description" role="cell">פתיחת הכנס – פרופ׳ שמוליק חיון</span><span class="schedule-time" role="cell">08:45–09:00</span></div>
+          <div class="schedule-row" role="row"><span class="schedule-description" role="cell">ברכת רקטור האוניברסיטה – פרופ׳ יניב גלבשטיין</span><span class="schedule-time" role="cell">09:00–09:15</span></div>
+          <div class="schedule-row" role="row"><span class="schedule-description" role="cell">ברכת נ׳ משרד הביטחון – חנ״ב משהב״ט</span><span class="schedule-time" role="cell">09:15–09:30</span></div>
+          <div class="schedule-row" role="row"><span class="schedule-description" role="cell">הרצאת מפתח #1 (Keynote #1) – יורדס – משהב״ט</span><span class="schedule-time" role="cell">09:30–10:00</span></div>
+          <div class="schedule-row" role="row"><span class="schedule-description" role="cell">הרצאת מפתח #2 (Keynote #2) – אמנון הררי</span><span class="schedule-time" role="cell">10:00–10:30</span></div>
+          <div class="schedule-row" role="row"><span class="schedule-description" role="cell">הרצאה #1 – יובל לוי – סימולציות חומרים</span><span class="schedule-time" role="cell">10:30–10:55</span></div>
+          <div class="schedule-row" role="row"><span class="schedule-description" role="cell">הרצאה #2 – פרופ׳ גיא מקוב – AI וחומרים</span><span class="schedule-time" role="cell">10:55–11:20</span></div>
+          <div class="schedule-row" role="row"><span class="schedule-description" role="cell">הרצאה #3 – מפא״ת לא יאמין (מחכים לתשובה מהמקפ״ס)</span><span class="schedule-time" role="cell">11:20–11:45</span></div>
+          <div class="schedule-row" role="row"><span class="schedule-description" role="cell">הרצאה #4 – פרופ׳ מארק שוורצמן – ציפויים (שת״פ עם רפאל)</span><span class="schedule-time" role="cell">11:45–12:05</span></div>
+          <div class="schedule-row" role="row"><span class="schedule-description" role="cell">ארוחת צהריים, פוסטרים ונטוורקינג</span><span class="schedule-time" role="cell">12:05–13:05</span></div>
+          <div class="schedule-row" role="row"><span class="schedule-description" role="cell">הרצאה #5 – פרופ׳ מארק שוורצמן – ציפויים (שת״פ עם רפאל)</span><span class="schedule-time" role="cell">13:05–13:30</span></div>
+          <div class="schedule-row" role="row"><span class="schedule-description" role="cell">הרצאה #6 – גיל בר (Aerogels)</span><span class="schedule-time" role="cell">13:30–13:55</span></div>
+          <div class="schedule-row" role="row"><span class="schedule-description" role="cell">הרצאה #7 – יש להשלים</span><span class="schedule-time" role="cell">13:55–14:20</span></div>
+          <div class="schedule-row" role="row"><span class="schedule-description" role="cell">סיור במעבדות THERIS</span><span class="schedule-time" role="cell">14:20–15:00</span></div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
