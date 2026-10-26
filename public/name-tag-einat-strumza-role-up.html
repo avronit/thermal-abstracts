@@ -57,7 +57,7 @@
         position: relative;
         display: flex;
         flex: 1;
-        align-items: center;
+        align-items: flex-start;
         justify-content: center;
         padding: 2mm 6mm;
         background:
@@ -67,14 +67,14 @@
 
       .diagram {
         position: absolute;
-        top: 50%;
+        bottom: 1mm;
         left: 50%;
         display: block;
         width: 62mm;
-        height: 41mm;
+        height: 23mm;
         object-fit: contain;
         opacity: .42;
-        transform: translate(-50%, -50%);
+        transform: translateX(-50%);
       }
 
       .identity {
@@ -85,6 +85,7 @@
         flex-direction: column;
         align-items: center;
         gap: 2mm;
+        margin-top: 5mm;
       }
 
       .name {
