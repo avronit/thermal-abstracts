@@ -375,7 +375,7 @@ a { color: inherit; }
   .hero-theris-link { position: absolute; z-index: 1; right: calc(12px + clamp(136px, 35vw, 210px) / 2); bottom: 130px; margin: 0; transform: translateX(50%); }
   .button.hero-theris-link:hover { transform: translate(50%, -2px); }
   .button.hero-theris-link { min-height: 36px; gap: 8px; padding: 0 11px; font-size: 10px; }
-  .research-diagram { top: 53%; right: 12px; width: clamp(136px, 35vw, 210px); opacity: .95; }
+  .research-diagram { top: 58%; right: 12px; width: clamp(136px, 35vw, 210px); opacity: .95; }
   .hero h1 { font-size: clamp(29px, 7.6vw, 39px); margin: 16px 0 14px; }
   .hero-copy { max-width: 365px; font-size: 14px; }
   .hero-actions { gap: 14px 20px; margin-top: 25px; }

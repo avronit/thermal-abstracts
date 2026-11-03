@@ -40,7 +40,7 @@ function App() {
         </header>
         <div className="hero-main">
           <div className="hero-content" id="top">
-            <p className="eyebrow"><span className="live-dot" /> Registration and call for abstracts <span className="eyebrow-divider">/</span> <span className="hero-date"><span className="hero-date-line">December <span className="hero-date-number">15<sup className="ordinal-suffix">th</sup></span> 2026</span><span className="hero-location">Ben-Gurion University</span></span></p>
+            <p className="eyebrow"><span className="live-dot" /> Registration and call for abstracts <span className="eyebrow-divider">/</span> <span className="hero-date"><span className="hero-date-line">December <span className="hero-date-number">15<sup className="ordinal-suffix">th</sup></span> 2026</span><span className="hero-location">Ben-Gurion University</span><span className="hero-location">Building 71 (Senate House), Senate Hall on the ground floor</span></span></p>
             <h1 id="event-title">The 4<sup className="ordinal-suffix">th</sup> Conference on Materials and Technologies for Extreme Conditions</h1>
           </div>
           <a className="hero-theris-link button button-theris" href={therisUrl} target="_blank" rel="noreferrer">
@@ -86,6 +86,7 @@ function App() {
                     <li>Ben-Gurion University external parking lot</li>
                     <li>University North Train Station parking lot</li>
                   </ul>
+                  <p><a href="https://www.bgu.ac.il/general/maps" target="_blank" rel="noreferrer">View campus map <span aria-hidden="true">↗</span></a></p>
                 </aside>
               </div>
               <div className="submission-actions">
