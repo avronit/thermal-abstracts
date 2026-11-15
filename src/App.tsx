@@ -49,7 +49,7 @@ function App() {
         </div>
         <div className="hero-footnote">
           <span>Material characterization, Simulation, Material development and production</span>
-          <span>Abstract deadline <strong>15 November 2026</strong></span>
+          <span>Abstract deadline <strong>22 November 2026</strong></span>
         </div>
       </section>
 
@@ -103,7 +103,7 @@ function App() {
             <div className="deadline-block">
               <p className="aside-label">Important dates</p>
               <div className="deadline-item">
-                <p className="deadline-date"><time dateTime="2026-11-15">15 <span>NOV</span></time></p>
+                <p className="deadline-date"><time dateTime="2026-11-22">22 <span>NOV</span></time></p>
                 <p className="deadline-year">2026 · Abstract deadline</p>
               </div>
               <div className="deadline-item">
