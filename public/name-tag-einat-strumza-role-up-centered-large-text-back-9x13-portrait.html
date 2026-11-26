@@ -3,52 +3,96 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>תג שם | עינת סטרומזה | צד אחורי</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=David+Libre:wght@400;500;700&display=swap" rel="stylesheet" />
+    <meta name="description" content="Conference program for the 4th Conference on Materials and Technologies for Extreme Conditions." />
+    <title>Conference Program | THERIS</title>
     <style>
       @page { size: 90mm 130mm; margin: 0; }
       * { box-sizing: border-box; }
       html, body { width: 90mm; height: 130mm; margin: 0; }
-      body { color: #fffaf2; font-family: "David Libre", serif; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-      .tag { display: flex; width: 90mm; height: 130mm; flex-direction: column; overflow: hidden; background: #8e1b0b; }
-      .header { display: flex; height: 17mm; flex: 0 0 17mm; overflow: hidden; background: #fff; }
-      .brand-strip { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center top; }
-      .scene { position: relative; display: flex; flex: 1; min-height: 0; align-items: stretch; justify-content: center; padding: 1.5mm 2mm; background: linear-gradient(180deg, rgba(36,5,2,.4), rgba(36,5,2,.72)), url("./sun-closeup.png") center / cover no-repeat; }
-      .schedule { display: grid; width: 100%; height: 100%; grid-template-rows: repeat(15, minmax(0, 1fr)); padding: .5mm 1mm; background: #fff; color: #171717; direction: rtl; }
-      .schedule-row { display: flex; min-width: 0; min-height: 0; flex-direction: column; align-items: center; justify-content: center; gap: .15mm; overflow: hidden; border-bottom: .15mm solid #dedede; text-align: center; }
+      body { background: #17100d; color: #171717; font-family: Arial, Helvetica, sans-serif; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .poster { display: flex; width: 90mm; height: 130mm; flex-direction: column; overflow: hidden; padding: 0 4mm; background: #17100d; }
+      .hero-art { position: relative; height: 31mm; flex: 0 0 31mm; margin: 0 -4mm; overflow: hidden; background: #120b08; }
+      .hero-art img { display: block; width: 100%; height: auto; }
+      .hero-art::after { position: absolute; right: 0; bottom: 0; left: 0; z-index: 1; height: 2mm; background: #120b08; content: ""; }
+      .program-card { display: flex; min-height: 0; flex: 1; flex-direction: column; overflow: hidden; margin: .5mm 0 1.5mm; border-radius: 1.4mm; background: #f5f1ea; }
+      .program-title { display: grid; height: 6mm; flex: 0 0 6mm; grid-template-columns: 1fr 1fr; align-items: center; background: #f36b00; color: #fff; direction: ltr; font-size: 7.5pt; font-weight: 800; }
+      .program-title span:first-child { padding-left: 2mm; direction: rtl; text-align: left; }
+      .program-title span:last-child { padding-right: 2mm; text-align: right; }
+      .column-head { display: grid; height: 7mm; flex: 0 0 7mm; grid-template-columns: minmax(0, 1fr) 22mm; align-items: center; background: #f2e5d4; color: #171717; direction: ltr; text-align: center; }
+      .column-head > span { display: flex; height: 100%; flex-direction: column; justify-content: center; font-size: 5.7pt; font-weight: 700; line-height: 1.05; }
+      .column-head > span + span { border-left: .2mm solid #d5c9b9; }
+      .column-head small { font-size: 4.8pt; font-weight: 500; }
+      .schedule { display: flex; min-height: 0; flex: 1; flex-direction: column; direction: ltr; }
+      .schedule-row { display: grid; min-height: 0; flex: .8 1 0; grid-template-columns: minmax(0, 1fr) 22mm; align-items: center; overflow: hidden; border-bottom: .15mm solid #dedbd6; padding: .15mm 1mm; text-align: center; }
       .schedule-row:last-child { border-bottom: 0; }
-      .description { display: block; width: 100%; overflow: hidden; color: #171717; font-size: 7.6pt; font-weight: 500; line-height: 1; letter-spacing: -.08pt; text-overflow: clip; white-space: nowrap; }
-      .compact .description { font-size: 6.65pt; }
-      .time { display: block; color: #174a7e; font-size: 7.4pt; font-weight: 700; line-height: 1; }
-      @media screen { body { background: #222; } .tag { margin: 0 auto; } }
+      .schedule-row.detail { flex: 1.35 1 0; }
+      .schedule-row.talk-detail { flex: 2.45 1 0; }
+      .schedule-row.medium-detail { flex: 1.9 1 0; }
+      .schedule-row.feature-detail { flex: 3.6 1 0; }
+      .schedule-row.feature-detail-primary { flex: 4.5 1 0; }
+      .schedule-row.feature-detail .activity-copy { line-height: 1; }
+      .schedule-row.highlight { flex: 1.1 1 0; padding: .3mm 1mm; background: #f7d4a9; }
+      .activity { display: grid; min-width: 0; grid-template-columns: 5mm minmax(0, 1fr); align-items: center; direction: ltr; }
+      .activity-icon { display: flex; align-items: center; justify-content: center; color: #171717; }
+      .activity-icon svg { width: 3.4mm; height: 3.4mm; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.8; }
+      .activity-copy { min-width: 0; color: #171717; direction: rtl; font-size: 5.5pt; font-weight: 500; line-height: 1.02; }
+      .activity-copy strong { font-weight: 700; }
+      .subtitle { display: block; margin-top: 0; font-size: 3.8pt; font-weight: 400; line-height: 1; }
+      .subtitle[dir="ltr"] { font-size: 3.6pt; }
+      .time { color: #171717; font-size: 6pt; font-weight: 800; line-height: 1; white-space: nowrap; }
+      .schedule-row .time { border-left: .2mm solid #d5c9b9; padding: 0 .5mm; }
+      .schedule-row strong { font-weight: 400; }
+      .schedule-row.highlight strong { font-weight: 700; }
+      .footer { position: relative; display: flex; height: 4mm; flex: 0 0 4mm; align-items: center; justify-content: space-between; gap: 2mm; margin: 0 -4mm; padding: 0 1mm .25mm; color: #f87900; direction: ltr; background: #17100d; }
+      .footer::before { position: absolute; top: -1.5mm; right: 0; left: 0; height: 5.5mm; background: #17100d; content: ""; }
+      .footer-slogan, .footer-icons { visibility: hidden; }
+      .footer-slogan { position: relative; flex: 0 0 31mm; padding-bottom: 2mm; font-size: 5pt; letter-spacing: .25em; line-height: 1.55; }
+      .footer-slogan::after { position: absolute; bottom: 0; left: 0; width: 14mm; border-bottom: .5mm solid #f87900; content: ""; }
+      .footer-icons { display: block; width: 43mm; height: 10mm; fill: none; stroke: #f87900; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.4; }
+      @media screen { body { margin: 0 auto; } .poster { box-shadow: 0 2mm 8mm rgba(0, 0, 0, .35); } }
     </style>
   </head>
   <body>
-    <main class="tag">
-      <header class="header">
-        <img class="brand-strip" src="./role-up.png" alt="לוגו הכנס: THERIS, אוניברסיטת בן-גוריון, משרד הביטחון ומפא״ת" />
-      </header>
-      <section class="scene">
+    <main class="poster">
+      <div class="hero-art">
+        <img src="./name-tag-einat-strumza-role-up-centered-large-text-9x13-portrait-new-back.png" alt="Conference partners, title, date, and location for the 4th Conference on Materials and Technologies for Extreme Conditions." />
+      </div>
+      <section class="program-card" aria-label="Conference program">
+        <div class="program-title"><span>תוכנית הכנס</span><span>Conference Program</span></div>
+        <div class="column-head" role="row">
+          <span role="columnheader">פעילות<small>Activity</small></span>
+          <span role="columnheader">שעה<small>Time</small></span>
+        </div>
         <div class="schedule" role="table" aria-label="תוכנית הכנס לפי שעות">
-          <div class="schedule-row" role="row"><span class="time" role="cell" dir="ltr">08:00–08:45</span><span class="description" role="cell">התכנסות, רישום וכיבוד בוקר</span></div>
-          <div class="schedule-row" role="row"><span class="time" role="cell" dir="ltr">08:45–09:00</span><span class="description" role="cell">פתיחת הכנס – פרופ׳ שמוליק חיון</span></div>
-          <div class="schedule-row compact" role="row"><span class="time" role="cell" dir="ltr">09:00–09:15</span><span class="description" role="cell">ברכת רקטור האוניברסיטה – פרופ׳ יניב גלבשטיין</span></div>
-          <div class="schedule-row" role="row"><span class="time" role="cell" dir="ltr">09:15–09:30</span><span class="description" role="cell">ברכת נ׳ משרד הביטחון – חנ״ב משהב״ט</span></div>
-          <div class="schedule-row" role="row"><span class="time" role="cell" dir="ltr">09:30–10:00</span><span class="description" role="cell">הרצאת מפתח #1 (Keynote #1) – יורדס – משהב״ט</span></div>
-          <div class="schedule-row" role="row"><span class="time" role="cell" dir="ltr">10:00–10:30</span><span class="description" role="cell">הרצאת מפתח #2 (Keynote #2) – אמנון הררי</span></div>
-          <div class="schedule-row" role="row"><span class="time" role="cell" dir="ltr">10:30–10:55</span><span class="description" role="cell">הרצאה #1 – יובל לוי – סימולציות חומרים</span></div>
-          <div class="schedule-row" role="row"><span class="time" role="cell" dir="ltr">10:55–11:20</span><span class="description" role="cell">הרצאה #2 – פרופ׳ גיא מקוב – AI וחומרים</span></div>
-          <div class="schedule-row compact" role="row"><span class="time" role="cell" dir="ltr">11:20–11:45</span><span class="description" role="cell">הרצאה #3 – מפא״ת לא יאמין (מחכים לתשובה מהמקפ״ס)</span></div>
-          <div class="schedule-row compact" role="row"><span class="time" role="cell" dir="ltr">11:45–12:05</span><span class="description" role="cell">הרצאה #4 – פרופ׳ מארק שוורצמן – ציפויים (שת״פ עם רפאל)</span></div>
-          <div class="schedule-row" role="row"><span class="time" role="cell" dir="ltr">12:05–13:05</span><span class="description" role="cell">ארוחת צהריים, פוסטרים ונטוורקינג</span></div>
-          <div class="schedule-row compact" role="row"><span class="time" role="cell" dir="ltr">13:05–13:30</span><span class="description" role="cell">הרצאה #5 – פרופ׳ מארק שוורצמן – ציפויים (שת״פ עם רפאל)</span></div>
-          <div class="schedule-row" role="row"><span class="time" role="cell" dir="ltr">13:30–13:55</span><span class="description" role="cell">הרצאה #6 – גיל בר (Aerogels)</span></div>
-          <div class="schedule-row" role="row"><span class="time" role="cell" dir="ltr">13:55–14:20</span><span class="description" role="cell">הרצאה #7 – יש להשלים</span></div>
-          <div class="schedule-row" role="row"><span class="time" role="cell" dir="ltr">14:20–15:00</span><span class="description" role="cell">סיור במעבדות THERIS</span></div>
+          <div class="schedule-row" role="row"><span class="activity" role="cell"><span class="activity-icon"></span><span class="activity-copy">התכנסות, רישום וכיבוד בוקר</span></span><span class="time" role="cell" dir="ltr">08:30–09:00</span></div>
+          <div class="schedule-row" role="row"><span class="activity" role="cell"><span class="activity-icon"></span><span class="activity-copy">פתיחת הכנס – פרופ׳ שמוליק חיון, THERIS</span></span><span class="time" role="cell" dir="ltr">09:00–09:05</span></div>
+          <div class="schedule-row" role="row"><span class="activity" role="cell"><span class="activity-icon"></span><span class="activity-copy">ברכת רקטור האוניברסיטה – פרופ׳ יניב גלשטיין</span></span><span class="time" role="cell" dir="ltr">09:05–09:15</span></div>
+          <div class="schedule-row" role="row"><span class="activity" role="cell"><span class="activity-icon"></span><span class="activity-copy">ברכת נציג משרד הביטחון</span></span><span class="time" role="cell" dir="ltr">09:15–09:25</span></div>
+          <div class="schedule-row" role="row"><span class="activity" role="cell"><span class="activity-icon"></span><span class="activity-copy">הרצאת מפתח #1: יורדם סיסון אבונה – משהב״ט</span></span><span class="time" role="cell" dir="ltr">09:25–09:45</span></div>
+          <div class="schedule-row detail medium-detail" role="row"><span class="activity" role="cell"><span class="activity-icon"></span><span class="activity-copy">הרצאת מפתח #2: <strong>אמנון הררי</strong> – טכניון<span class="subtitle">הצגת המרכז לתעופה מהירה</span><span class="subtitle" dir="ltr">Introducing the High-Speed Flight Center</span></span></span><span class="time" role="cell" dir="ltr">09:45–10:10</span></div>
+          <div class="schedule-row detail medium-detail" role="row"><span class="activity" role="cell"><span class="activity-icon"></span><span class="activity-copy">הרצאה #1: <strong>פרופ' מארק שוורצמן</strong> - אונ' בן-גוריון<span class="subtitle">ננו־מבנים מונעי החזרה לאופטיקה בתנאי סביבה קיצוניים</span><span class="subtitle" dir="ltr">Antireflective nanostructures for harsh-environment optics</span></span></span><span class="time" role="cell" dir="ltr">10:10–10:30</span></div>
+          <div class="schedule-row highlight" role="row"><span class="activity" role="cell"><span class="activity-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h12v8a4 4 0 0 1-4 4H9a4 4 0 0 1-4-4zM17 10h2a2 2 0 0 1 0 4h-2M8 4c0 1 1 1 1 2M12 3c0 1 1 1 1 2"/></svg></span><span class="activity-copy"><strong>הפסקת קפה</strong></span></span><span class="time" role="cell" dir="ltr">10:30–10:50</span></div>
+          <div class="schedule-row detail talk-detail" role="row"><span class="activity" role="cell"><span class="activity-icon"></span><span class="activity-copy">הרצאה #2: <strong>גלי בר</strong> - ממ"ג<span class="subtitle">דבק שקוף אופטית ועמיד לקרינה ליישומים מתקדמים</span><span class="subtitle" dir="ltr">Optically<br />Transparent, Radiation-Tolerant Adhesive for Advanced Applications</span></span></span><span class="time" role="cell" dir="ltr">10:50–11:10</span></div>
+          <div class="schedule-row detail medium-detail" role="row"><span class="activity" role="cell"><span class="activity-icon"></span><span class="activity-copy">הרצאה #3: <strong>פרופ' גיא מקוב</strong> - אונ' בן-גוריון<span class="subtitle">מבחירת חומרים לתיכון חומרים</span><span class="subtitle" dir="ltr">From Materials Selection to Materials Design</span></span></span><span class="time" role="cell" dir="ltr">11:10–11:30</span></div>
+          <div class="schedule-row detail talk-detail" role="row"><span class="activity" role="cell"><span class="activity-icon"></span><span class="activity-copy">הרצאה #4: <strong>יובל לוי</strong> - ISCFDS<span class="subtitle">פתרון אלמנטים סופיים להדמיית תגובת חומרים אבלטיביים</span><span class="subtitle" dir="ltr">Finite<br />Element Solver for the Material Response Simulation of Ablative Materials</span></span></span><span class="time" role="cell" dir="ltr">11:30–11:50</span></div>
+          <div class="schedule-row detail medium-detail" role="row"><span class="activity" role="cell"><span class="activity-icon"></span><span class="activity-copy">הרצאה #5: <strong>מתן שניידר</strong>– מון-שוט<span class="subtitle">שיקולים בבחירת חומרים למאיץ למסה אלקטרומגנטי</span><span class="subtitle" dir="ltr">Considerations in Selecting Materials for an Electromagnetic Mass Accelerator</span></span></span><span class="time" role="cell" dir="ltr">11:50–12:10</span></div>
+          <div class="schedule-row highlight" role="row"><span class="activity" role="cell"><span class="activity-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3v7M5 3v4a2 2 0 0 0 4 0V3M7 9v12M15 3v18M15 3c3 2 4 5 4 8h-4"/></svg></span><span class="activity-copy"><strong>ארוחת צהריים, פוסטרים ונטוורקינג</strong></span></span><span class="time" role="cell" dir="ltr">12:10–13:10</span></div>
+          <div class="schedule-row detail feature-detail feature-detail-primary" role="row"><span class="activity" role="cell"><span class="activity-icon"></span><span class="activity-copy">הרצאה #6: <strong>קיריל וולצ׳ק</strong> (CEO, OQTON) ו<strong>ולנטין נוב</strong> (CEO, NOVAKRON)<span class="subtitle">Physical AI בייצור מתקדם: האצת הדרך מתכנון המותאם לייצור ועד לחלקים<br />שעברו הסמכה</span><span class="subtitle" dir="ltr">Physical<br />AI in Advanced Manufacturing: Accelerating the Path from Design for<br />Manufacturing to Certified Parts</span></span></span><span class="time" role="cell" dir="ltr">13:10–13:30</span></div>
+          <div class="schedule-row detail feature-detail" role="row"><span class="activity" role="cell"><span class="activity-icon"></span><span class="activity-copy">הרצאה #7: <strong>לב מיסיוק</strong> – תעשייה אווירית<span class="subtitle">חיזוי התנהגות חומרים מרוכבים קרמיים C/C-SiC באמצעות גישת מידול<br />רב־סקאלית מבוססת מודל חלופי</span><span class="subtitle" dir="ltr">Predicting<br />the behavior of C/C-SiC CMCs using a surrogate based multiscale modeling<br />approach</span></span></span><span class="time" role="cell" dir="ltr">13:30–13:50</span></div>
+          <div class="schedule-row detail feature-detail" role="row"><span class="activity" role="cell"><span class="activity-icon"></span><span class="activity-copy">הרצאה #8: <strong>עדן אלעזר</strong> – רפאל<span class="subtitle">שיפור ביצועי חומרים מרוכבים בטמפרטורות גבוהות באמצעות שיקוע שכבות אטומיות</span><span class="subtitle" dir="ltr">Enhancing<br />Composite Materials Performance at Elevated Temperatures Using Atomic Layer<br />Deposition</span></span></span><span class="time" role="cell" dir="ltr">13:50–14:10</span></div>
+          <div class="schedule-row highlight" role="row"><span class="activity" role="cell"><span class="activity-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="8" r="2.5"/><circle cx="16" cy="8" r="2.5"/><path d="M2.5 19v-2a5.5 5.5 0 0 1 11 0v2zM13 14a5 5 0 0 1 8.5 3.5V19h-6"/></svg></span><span class="activity-copy"><strong>סיור במעבדות THERIS</strong></span></span><span class="time" role="cell" dir="ltr">14:10–15:00</span></div>
         </div>
       </section>
+      <footer class="footer">
+        <div class="footer-slogan">MATERIALS<br />FOR A SAFER<br />AND BRIGHTER FUTURE</div>
+        <svg class="footer-icons" viewBox="0 0 240 48" aria-hidden="true">
+          <g transform="translate(2 4)"><path d="M17 1 33 10v19L17 38 1 29V10z"/><path d="M17 10v15m-4-4a4 4 0 1 0 8 0c0-2-2-3-2-5h-4c0 2-2 3-2 5z"/></g>
+          <g transform="translate(50 4)"><path d="M17 1 33 10v19L17 38 1 29V10z"/><path d="m8 14 9-5 9 5-9 5zM8 20l9 5 9-5M8 25l9 5 9-5"/></g>
+          <g transform="translate(98 4)"><path d="M17 1 33 10v19L17 38 1 29V10z"/><circle cx="17" cy="19" r="2"/><circle cx="10" cy="13" r="1.5"/><circle cx="24" cy="13" r="1.5"/><circle cx="10" cy="25" r="1.5"/><circle cx="24" cy="25" r="1.5"/><path d="m11 14 5 4m2 0 5-4m-11 10 5-4m2 0 5 4"/></g>
+          <g transform="translate(146 4)"><path d="M17 1 33 10v19L17 38 1 29V10z"/><path d="m7 22 17-9 2 2-9 6 7 3-1 2-9-2-5 3-2-1 3-4z"/></g>
+          <g transform="translate(194 4)"><path d="M17 1 33 10v19L17 38 1 29V10z"/><path d="m9 12 4 4m-4 0 4-4m6 6 4 4m-4 0 4-4m-6-8 4 4m-4 0 4-4m-8 12 4 4m-4 0 4-4"/></g>
+        </svg>
+      </footer>
     </main>
   </body>
 </html>
